@@ -1,6 +1,7 @@
 "use strict";
 
 // Header objects
+const header = document.querySelector("header");
 const homeLink = document.getElementById("nav-li-home");
 const skillsLink = document.getElementById("nav-li-skills");
 const projectLink = document.getElementById("nav-li-projects");
@@ -24,6 +25,7 @@ let clrPrimary = "rgba(248, 242, 242, 1)";
 let clrSecondary = "rgba(30, 30, 30, 1)";
 let clrAlternative = "rgba(237, 7, 53, 1)";
 
+//Function that is called when lang toggler is clicked and changes the lang of the page
 function changeLang() {
     if (langSwitch.checked) {
         //Header text to greek
@@ -55,10 +57,12 @@ function changeLang() {
     }
 }
 
-function changeDark() {
+//Function that is called when theme toggler is clicked and changes the theme of the page
+function changeTheme() {
     if (darkSwitch.checked) {
         //Body and header objects for dark mode
         document.body.style.backgroundColor = clrSecondary;
+        header.style.backgroundColor = clrSecondary;
         homeLink.style.color = clrPrimary;
         skillsLink.style.color = clrPrimary;
         projectLink.style.color = clrPrimary;
@@ -81,6 +85,7 @@ function changeDark() {
     else {
         //Body and header objects for light mode
         document.body.style.backgroundColor = clrPrimary;
+        header.style.backgroundColor = clrPrimary;
         homeLink.style.color = clrSecondary;
         skillsLink.style.color = clrSecondary;
         projectLink.style.color = clrSecondary;

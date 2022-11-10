@@ -31,15 +31,21 @@ a {
 
 /* Top navbar */
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-primary);
+    z-index: 1;
+    outline: 1px solid red;
+}
+
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 0;
-    top: 0;
     height: 10vh;
-    width: 100%;
-    z-index: 1;
     padding: 10px 0px;
 }
 
@@ -142,18 +148,22 @@ input:checked + label:after {
     transform: translateY(-15%);
 }
 
-/* Home */
-
-.home {
-    height: 90vh;
+/* Main */
+.home, .skills {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Home */
+.home {
+    margin-top: 30px;
+}
+
 .home-info-wrapper {
     transform: translateY(-20%);
-    margin: 0px 10px;
+    margin: 0px 25px;
 }
 
 #home-welcome {
@@ -209,5 +219,5 @@ input:checked + label:after {
 
 #me-img {
     margin-left: 50px;
-    margin-right: 10px;
+    margin-right: 25px;
 }

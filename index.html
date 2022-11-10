@@ -16,7 +16,7 @@
             <!-- Nav menu list -->
             <ul class="top-nav-ul">
                 <li class="top-nav-li"><a href="#home" id="nav-li-home">Home</a></li>
-                <li class="top-nav-li"><a id="nav-li-skills">Skills</a></li>
+                <li class="top-nav-li"><a href="#skills" id="nav-li-skills">Skills</a></li>
                 <li class="top-nav-li"><a id="nav-li-projects">Projects</a></li>
                 <li class="top-nav-li"><a id="nav-li-contact">Contact</a></li>
             </ul>
@@ -39,7 +39,7 @@
                         </g>
                     </svg>
                     <!-- Toggler -->
-                    <input type="checkbox" id="dark-switch" onclick="changeDark()"><label for="dark-switch"></label>
+                    <input type="checkbox" id="dark-switch" onclick="changeTheme()"><label for="dark-switch"></label>
                     <!-- Moon svg -->
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve" id="dark-svg">
                         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -62,7 +62,8 @@
 
     <!-- Main section -->
     <main>
-        <section class="home">
+        <!-- Home section -->
+        <section class="home" id="home">
             <div class="home-info-wrapper">
                 <h1 id="home-welcome">WELCOME</h1>
                 <h2 id="home-name">My name is <span>Panagiotis</span> Tsionis.</h2>
@@ -73,6 +74,10 @@
                 </div>
             </div>
             <img src="./images/mebw.png" alt="Panagiotis Tsionis" id="me-img">
+        </section>
+        <!-- Skills section -->
+        <section class="skills" id="skills">
+            
         </section>
     </main>
 
