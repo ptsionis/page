@@ -185,36 +185,40 @@ input:checked + label:after {
     margin-top: 50px;
 }
 
-#button-cv {
+#button-cv, #button-github, #button-linkedin {
     cursor: pointer;
+    margin-right: 15px;
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: .75px;
     font-weight: 600;
+}
+
+#button-cv {
     background-color: var(--clr-alternative);
+}
+
+#button-github {
+    background-color: var(--clr-secondary);
+}
+
+#button-linkedin {
+    background-color: var(--clr-primary);
+    outline: 1px solid var(--clr-secondary);
 }
 
 #button-cv a {
     color: var(--clr-primary);
 }
 
-#button-github {
-    cursor: pointer;
-    margin-left: 20px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .75px;
-    font-weight: 600;
-    background-color: var(--clr-secondary);
-    transition: all ease .3s;
-}
-
 #button-github a {
     color: var(--clr-primary);
+}
+
+#button-linkedin a {
+    color: var(--clr-secondary);
 }
 
 #me-img {

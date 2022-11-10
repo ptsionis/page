@@ -18,6 +18,8 @@ const homeBio = document.getElementById("home-bio");
 const buttonCvLink = document.getElementById("button-cv-link");
 const buttonGithub = document.getElementById("button-github");
 const buttonGithubLink = document.getElementById("button-github-link");
+const buttonLinkedin = document.getElementById("button-linkedin");
+const buttonLinkedinLink = document.getElementById("button-linkedin-link");
 const meImg = document.getElementById("me-img");
 
 //Color palette
@@ -40,6 +42,7 @@ function changeLang() {
         homeBio.innerHTML = "Είμαι προπτυχιακός φοιτητής στο τμήμα Εφαρμοσμένης Πληροφορικής του <span><a href=\"https://www.uom.gr/\" target=\"_blank\">Πανεπιστημίου Μακεδονίας</a></span>."
         buttonCvLink.innerHTML = "Λήψη βιογραφικού";
         buttonGithubLink.innerHTML = "Προφίλ GitHub";
+        buttonLinkedinLink.innerHTML = "Προφίλ LinkedIn";
     }
     else {
         //Header text to english
@@ -54,6 +57,7 @@ function changeLang() {
         homeBio.innerHTML = "I am an undergraduate student at Applied Informatics Department at <span><a href=\"https://www.uom.gr/\" target=\"_blank\">University of Macedonia</a></span>."
         buttonCvLink.innerHTML = "Download CV";
         buttonGithubLink.innerHTML = "GitHub Profile";
+        buttonLinkedinLink.innerHTML = "LinkedIn Profile";
     }
 }
 
@@ -80,6 +84,9 @@ function changeTheme() {
         homeBio.style.color = clrPrimary;
         buttonGithub.style.backgroundColor = clrPrimary;
         buttonGithubLink.style.color = clrSecondary;
+        buttonLinkedin.style.backgroundColor = clrSecondary;
+        buttonLinkedin.style.outline = "1px solid ".concat(clrPrimary);
+        buttonLinkedinLink.style.color = clrPrimary;
         meImg.src = "./images/mebw-stroke-white.png"
     }
     else {
@@ -104,6 +111,9 @@ function changeTheme() {
         homeWelcome.style.color = clrSecondary;
         homeName.style.color = clrSecondary;
         homeBio.style.color = clrSecondary;
+        buttonLinkedin.style.backgroundColor = clrPrimary;
+        buttonLinkedin.style.outline = "1px solid ".concat(clrSecondary);
+        buttonLinkedinLink.style.color = clrSecondary;
         meImg.src = "./images/mebw-stroke-white.png"
     }
 }
