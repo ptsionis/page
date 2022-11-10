@@ -37,6 +37,7 @@ a {
     align-items: center;
     left: 0;
     top: 0;
+    height: 10vh;
     width: 100%;
     z-index: 1;
     padding: 10px 0px;
@@ -139,4 +140,74 @@ input:checked + label:after {
     color: var(--clr-secondary);
     margin: 0px 10px;
     transform: translateY(-15%);
+}
+
+/* Home */
+
+.home {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-info-wrapper {
+    transform: translateY(-20%);
+    margin: 0px 10px;
+}
+
+#home-welcome {
+    font-size: 5rem;
+    color: var(--clr-secondary);
+}
+
+#home-name {
+    font-size: 2.5rem;
+    color: var(--clr-secondary);
+}
+
+#home-name span, #home-bio span a {
+    color: var(--clr-alternative);
+}
+
+.home-buttons-wrapper {
+    display: flex;
+    margin-top: 50px;
+}
+
+#button-cv {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .75px;
+    font-weight: 600;
+    background-color: var(--clr-alternative);
+}
+
+#button-cv a {
+    color: var(--clr-primary);
+}
+
+#button-github {
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .75px;
+    font-weight: 600;
+    background-color: var(--clr-secondary);
+    transition: all ease .3s;
+}
+
+#button-github a {
+    color: var(--clr-primary);
+}
+
+#me-img {
+    margin-left: 50px;
+    margin-right: 10px;
 }

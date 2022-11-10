@@ -15,7 +15,7 @@
         <nav class="top-nav">
             <!-- Nav menu list -->
             <ul class="top-nav-ul">
-                <li class="top-nav-li"><a id="nav-li-home">Home</a></li>
+                <li class="top-nav-li"><a href="#home" id="nav-li-home">Home</a></li>
                 <li class="top-nav-li"><a id="nav-li-skills">Skills</a></li>
                 <li class="top-nav-li"><a id="nav-li-projects">Projects</a></li>
                 <li class="top-nav-li"><a id="nav-li-contact">Contact</a></li>
@@ -39,7 +39,7 @@
                         </g>
                     </svg>
                     <!-- Toggler -->
-                    <input type="checkbox" id="dark-switch" onclick="changeHeaderDark()"><label for="dark-switch"></label>
+                    <input type="checkbox" id="dark-switch" onclick="changeDark()"><label for="dark-switch"></label>
                     <!-- Moon svg -->
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve" id="dark-svg">
                         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -52,7 +52,7 @@
                     <!-- English span -->
                     <span class="lang-span">en</span>
                     <!-- Toggler -->
-                    <input type="checkbox" id="lang-switch" onclick="changeHeaderLang()" unchecked><label for="lang-switch"></label>
+                    <input type="checkbox" id="lang-switch" onclick="changeLang()" unchecked><label for="lang-switch"></label>
                     <!-- Greek span -->
                     <span class="lang-span">gr</span>
                 </div>
@@ -63,8 +63,16 @@
     <!-- Main section -->
     <main>
         <section class="home">
-            <h2>A few <span>words</span> about me</h2>
-            <p>My name is Panagiotis Tsionis. I am an undergraduate student, studying Applied Informatics at University of Macedonia.</p>
+            <div class="home-info-wrapper">
+                <h1 id="home-welcome">WELCOME</h1>
+                <h2 id="home-name">My name is <span>Panagiotis</span> Tsionis.</h2>
+                <p id="home-bio">I am an undergraduate student at Applied Informatics Department at <span><a href="https://www.uom.gr/" target="_blank">University of Macedonia</a></span>.</p>
+                <div class="home-buttons-wrapper">
+                    <button type="button" id="button-cv"><a href="./files/ptsionis_cv.pdf" id="button-cv-link" download>Download CV</a></button>
+                    <button type="button" id="button-github"><a href="https://github.com/ptsionis" id="button-github-link">GitHub Profile</a></button>
+                </div>
+            </div>
+            <img src="./images/mebw.png" alt="Panagiotis Tsionis" id="me-img">
         </section>
     </main>
 
