@@ -61,7 +61,7 @@ function changeLang() {
     else {
         //Header text to english
         homeLink.innerHTML = "Home";
-        toolsLink.innerHTML = "Skills";
+        toolsLink.innerHTML = "Tools";
         projectLink.innerHTML = "Projects";
         contactLink.innerHTML = "Contact";
 
