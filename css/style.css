@@ -39,6 +39,7 @@ header {
     background-color: var(--clr-primary);
     z-index: 1;
     outline: 1px solid red;
+    transition: all ease .3s;
 }
 
 .top-nav {
@@ -148,16 +149,12 @@ input:checked + label:after {
     transform: translateY(-15%);
 }
 
-/* Main */
-.home, .skills {
+/* Home */
+.home {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Home */
-.home {
     margin-top: 30px;
 }
 
@@ -224,4 +221,38 @@ input:checked + label:after {
 #me-img {
     margin-left: 50px;
     margin-right: 25px;
+}
+
+.tools {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tools-title {
+    font-size: 4rem;
+    color: var(--clr-secondary);
+    text-align: center;
+    transition: all ease .3s;
+}
+
+#tools-title span {
+    color: var(--clr-alternative);
+}
+
+.tools-wrapper {
+    margin-top: 75px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#java-svg, #html-svg, #css-svg, #js-svg, #mysql-svg, #photoshop-svg {
+    margin: 0px 10px;
+}
+
+#java-svg path, #html-svg path, #css-svg path, #js-svg path, #mysql-svg path, #photoshop-svg path {
+    transition: all ease .3s;
 }
