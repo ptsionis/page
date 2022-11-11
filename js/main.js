@@ -31,6 +31,30 @@ const jsSvgPathS = document.getElementsByClassName("js-svg-path-s");
 const mysqlSvgPath = document.getElementsByClassName("mysql-svg-path");
 const photoshopSvgPath = document.getElementsByClassName("photoshop-svg-path");
 
+//Project objects
+const projectsTitle = document.getElementById("projects-title");
+
+//Nerdwork objects
+const nerdworkTitle = document.getElementById("nerdwork-title");
+const nerdworkBio = document.getElementById("nerdwork-bio");
+const nerdworkAward = document.getElementById("nerdwork-award");
+const nerdworkGithubLink = document.getElementById("nerdwork-github-link");
+
+//Blackjack objects
+const blackjackTitle = document.getElementById("blackjack-title");
+const blackjackBio = document.getElementById("blackjack-bio");
+const blackjackGithubLink = document.getElementById("blackjack-github-link");
+const blackjackPlayLink = document.getElementById("blackjack-play-link");
+
+//Footer objects
+const footer = document.getElementById("page-5");
+const footerCopy = document.getElementById("footer-copy");
+const footerNavHome = document.getElementById("bottom-nav-li-home");
+const footerNavTools = document.getElementById("bottom-nav-li-tools");
+const footerNavProjects = document.getElementById("bottom-nav-li-projects");
+const footerNavContact = document.getElementById("bottom-nav-li-contact");
+const footerPath = document.getElementsByClassName("footer-path");
+
 //Color palette
 let clrPrimary = "rgba(248, 242, 242, 1)";
 let clrSecondary = "rgba(30, 30, 30, 1)";
@@ -55,6 +79,34 @@ function changeLang() {
 
         //Tools text to greek
         toolsTitle.innerHTML = "Εργαλεία <span>&</span> Τεχνολογίες";
+
+        //Projects text to greek
+        projectsTitle.innerHTML = "Πρότζεκτς";
+
+        //Nerdwork text to greek
+        nerdworkBio.innerHTML = "Το NerdWork είναι ένα ομαδικό πρότζεκτ, φτιαγμένο σε <span>Java</span>, το οποίο δημιουργήθηκε στα πλαίσια του μαθήματος Τεχνολογίας Λογισμικού."
+        + " Κάθε φοιτητής που κατέχει ένα ακαδημαϊκό email του τμήματος Εφαρμοσμένης Πληροφορικής, μπορεί να εγγραφεί και να χρησιμοποιεί το NerdWork για να παρατηρεί την πορεία των"
+        + " μαθημάτων του.<br><br>"
+        + "Το NerdWork διαπρέπει στο κομμάτι <span>προγραμματισμού ραντεβού</span> μεταξύ φοιτητών και καθηγητών, βοηθώντας αμφότερους στην διαχείριση των ραντεβού με ευκολία,"
+        + " <span>χωρίς</span> την ανάγκη για <span>άμεση και ταυτόχρονη επικοινωνία</span>.";
+        nerdworkAward.innerHTML = "Το NerdWork βραβεύτηκε ως ένα από τα <span>Top-3</span> πρότζεκτ στο μάθημα της Τεχνολογίας Λογισμικού για την ακαδημαϊκή χρονιά 2021 - 2022.";
+        nerdworkGithubLink.innerHTML = "NerdWork στο GitHub";
+
+        //Blackjack text to greek
+        blackjackTitle.innerHTML = "Εικοσι<span>μία</span>";
+        blackjackBio.innerHTML = "Η Εικοσιμία είναι ένα διαδικτυακό παιχνίδι που υλοποίησα, με στόχο την εξάσκηση των Front-end (και επί του παρόντος Back-end) ικανοτήτων μου."
+        + " Δημιουργήθηκε με χρήση <span>HTML5</span>, <span>CSS3</span> και <span>JavaScript</span>."
+        + "<br><br>Το πρότζεκτ βρίσκεται σε <span>BETA</span> έκδοση, καθώς υπάρχουν διάφορα bugs που χρήζουν επίλυσης, και επίσης, ορισμένα νέα χαρακτηριστικά που πρέπει να προστεθούν.<br>"
+        + "Χρησιμοποιείται ως ένα πρότζεκτ - <span>πείραμα</span>, πάνω στο οποίο δοκιμάζω διάφορα εργαλεία και τεχνολογίες, και ευελπιστώ να προσθέσω ένα τοπικό αποθετήριο βάσης δεδομένων,"
+        + " όπου ο παίχτης θα μπορεί να σώσει την πρόοδό του και να συνεχίσει από εκεί που σταμάτησε.";
+        blackjackGithubLink.innerHTML = "Εικοσιμία στο GitHub";
+        blackjackPlayLink.innerHTML = "Παίξτε Εικοσιμία";
+
+        //Footer text to greek
+        footerNavHome.innerHTML = "Αρχική";
+        footerNavTools.innerHTML = "Εργαλεία";
+        footerNavProjects.innerHTML = "Πρότζεκτς";
+        footerNavContact.innerHTML = "Επικοινωνία";
     }
     else {
         //Header text to english
@@ -73,6 +125,33 @@ function changeLang() {
 
         //Tools text to english
         toolsTitle.innerHTML = "Tools <span>&</span> Technologies";
+
+        //Projects text to english
+        projectsTitle.innerHTML = "Projects";
+
+        //Nerdwork text to english
+        nerdworkBio.innerHTML = "NerdWork is a team project, built with <span>Java</span>, that was created for our Software Engineering course."
+        + " Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork in order to keep track of his university courses.<br><br>"
+        + "NerdWork excels when it comes to <span>managing appointments</span> between students and professors, helping both sides manage their appointments with ease,"
+        + " <span>without</span> the need of <span>direct and simultaneous communication</span>.<br>"
+        nerdworkAward.innerHTML = "NerdWork was awarded as one of the <span>Top-3</span> projects in our Software Engineering course for the academic year 2021 - 2022.";
+        nerdworkGithubLink.innerHTML = "NerdWork on GitHub";
+
+        //Blackjack text to english
+        blackjackTitle.innerHTML = "Black<span>Jack</span>";
+        blackjackBio.innerHTML = "BlackJack is a web game I created in order to practice my Front-end (and currently Back-end) skills."
+        + " It is built using <span>HTML5</span>, <span>CSS3</span> and <span>JavaScript ES6+</span>.<br><br>"
+        + "This project is still in <span>BETA</span> version, since there are some bugs that have to be resolved and some new features to be added.<br>"
+        + "It serves as a project - <span>experiment</span>, where I test various tools and technologies, and I am looking forward to add a local storage database,"
+        + " where a player can save his progress and resume from where he left off.";
+        blackjackGithubLink.innerHTML = "BlackJack on GitHub";
+        blackjackPlayLink.innerHTML = "Play BlackJack";
+
+        //Footer text to english
+        footerNavHome.innerHTML = "Home";
+        footerNavTools.innerHTML = "Tools";
+        footerNavProjects.innerHTML = "Projects";
+        footerNavContact.innerHTML = "Contact";
     }
 }
 
@@ -132,6 +211,33 @@ function changeTheme() {
         for (let path of photoshopSvgPath) {
             path.style.fill = clrPrimary;
         }
+
+        //Projects objects for dark mode
+        projectsTitle.style.color = clrPrimary;
+
+        //Nerdwork objects for dark mode
+        nerdworkTitle.style.color = clrPrimary;
+        nerdworkBio.style.color = clrPrimary;
+        nerdworkAward.style.color = clrPrimary;
+        nerdworkGithubLink.style.backgroundColor = clrPrimary;
+        nerdworkGithubLink.style.color = clrSecondary;
+
+        //Blackjack objects for dark mode
+        blackjackTitle.style.color= clrPrimary;
+        blackjackBio.style.color = clrPrimary;
+        blackjackGithubLink.style.backgroundColor = clrPrimary;
+        blackjackGithubLink.style.color = clrSecondary;
+
+        //Footer objects for dark mode
+        footer.style.backgroundColor = clrPrimary;
+        footerCopy.style.color = clrSecondary;
+        footerNavHome.style.color = clrSecondary;
+        footerNavTools.style.color = clrSecondary;
+        footerNavProjects.style.color = clrSecondary;
+        footerNavContact.style.color = clrSecondary;
+        for (let path of footerPath) {
+            path.style.fill = clrSecondary;
+        }
     }
     else {
         //Body and header objects for light mode
@@ -186,6 +292,33 @@ function changeTheme() {
         }
         for (let path of photoshopSvgPath) {
             path.style.fill = clrSecondary;
+        }
+
+        //Projects objects for light mode
+        projectsTitle.style.color = clrSecondary;
+
+        //Nerdwork objects for light mode
+        nerdworkTitle.style.color = clrSecondary;
+        nerdworkBio.style.color = clrSecondary;
+        nerdworkAward.style.color = clrSecondary;
+        nerdworkGithubLink.style.backgroundColor = clrSecondary;
+        nerdworkGithubLink.style.color = clrPrimary;
+
+        //Blackjack objects for light mode
+        blackjackTitle.style.color= clrSecondary;
+        blackjackBio.style.color = clrSecondary;
+        blackjackGithubLink.style.backgroundColor = clrSecondary;
+        blackjackGithubLink.style.color = clrPrimary;
+
+        //Footer objects for dark mode
+        footer.style.backgroundColor = clrSecondary;
+        footerCopy.style.color = clrPrimary;
+        footerNavHome.style.color = clrPrimary;
+        footerNavTools.style.color = clrPrimary;
+        footerNavProjects.style.color = clrPrimary;
+        footerNavContact.style.color = clrPrimary;
+        for (let path of footerPath) {
+            path.style.fill = clrPrimary;
         }
     }
 }

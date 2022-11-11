@@ -246,10 +246,188 @@ input:checked + label:after {
     margin: 0px 10px;
 }
 
+.java-wrapper, .html-wrapper, .css-wrapper, .js-wrapper, .mysql-wrapper, .photoshop-wrapper {
+    cursor: pointer;
+}
+
+.java-wrapper:hover > #java-svg > .java-svg-path, .html-wrapper:hover > #html-svg > .html-svg-path-p,
+.css-wrapper:hover > #css-svg > .css-svg-path-p, .js-wrapper:hover > #js-svg > .js-svg-path-p,
+.mysql-wrapper:hover > #mysql-svg > .mysql-svg-path, .photoshop-wrapper:hover > #photoshop-svg > .photoshop-svg-path {
+    fill: var(--clr-alternative) !important;
+}
+
 /* Projects */
-.projects {
+.page-3, .page-4 {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#projects-title {
+    font-size: 4rem;
+    color: var(--clr-secondary);
+    text-align: center;
+}
+
+/* Nerdwork */
+
+.nerdwork {
+    margin-top: 75px;
+    width: 75%;
+    display: flex;
+}
+
+#nerdwork-img {
+    margin-right: 25px;
+}
+
+.nerdwork-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    text-align: end;
+}
+
+#nerdwork-title {
+    font-size: 2.5rem;
+    color: var(--clr-secondary);
+}
+
+#nerdwork-title span, #nerdwork-bio span, #nerdwork-award span {
+    color: var(--clr-alternative);
+}
+
+.nerdwork-text {
+    margin-bottom: 20px;
+}
+
+#nerdwork-bio span, #nerdwork-award span {
+    font-weight: 600;
+}
+
+#nerdwork-github-link {
+    margin: auto;
+    cursor: pointer;
+    width: fit-content;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .75px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+}
+
+/* Blackjack */
+
+.blackjack {
+    width: 75%;
+    display: flex;
+}
+
+#blackjack-img {
+    margin-left: 25px;
+}
+
+.blackjack-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    text-align: start;
+}
+
+#blackjack-title {
+    font-size: 2.5rem;
+    color: var(--clr-secondary);
+}
+
+#blackjack-title span, #blackjack-bio span {
+    color: var(--clr-alternative);
+}
+
+.blackjack-text {
+    margin-bottom: 20px;
+}
+
+.blackjackLinks {
+    display: flex;
+    justify-content: center;
+}
+
+#blackjack-github-link {
+    cursor: pointer;
+    width: fit-content;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .75px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+}
+
+#blackjack-play-link {
+    cursor: pointer;
+    width: fit-content;
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .75px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    background-color: var(--clr-alternative);
+}
+
+#blackjack-bio span {
+    font-weight: 600;
+}
+
+/* Footer */
+
+.footer {
+    height: 7.5vh;
+    width: 100%;
+    background-color: var(--clr-secondary);
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+    transform: translateY(70%);
+}
+
+#footer-copy {
+    color: var(--clr-primary);
+}
+
+.bottom-nav-ul {
+    display: flex;
+}
+
+.bottom-nav-li a {
+    margin: 20px;
+    color: var(--clr-primary);
+}
+
+.bottom-nav-li a:hover {
+    color: var(--clr-alternative) !important;
+}
+
+#footer-linkedin, #footer-github {
+    margin: 0px 5px;
+}
+
+#footer-linkedin:hover > svg > path, #footer-github:hover > svg > path {
+    fill: var(--clr-alternative) !important;
 }
