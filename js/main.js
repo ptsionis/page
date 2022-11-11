@@ -10,6 +10,9 @@ const langSpan = document.getElementsByClassName("lang-span");
 const darkPath = document.getElementsByClassName("dark-path");
 const langSwitch = document.getElementById("lang-switch");
 const darkSwitch = document.getElementById("dark-switch");
+const accessSwitch = document.getElementById("switches-access");
+const accessSpan = document.getElementById("access-span");
+let accessBool = -1;
 
 //Home objects
 const homeWelcome = document.getElementById("home-welcome");
@@ -171,6 +174,8 @@ function changeTheme() {
         for (let path of darkPath) {
             path.style.fill = clrPrimary;
         }
+        accessSwitch.style.backgroundColor = clrPrimary;
+        accessSpan.style.color = clrSecondary;
 
         //Home objects for dark mode
         homeWelcome.style.color = clrPrimary;
@@ -253,6 +258,8 @@ function changeTheme() {
         for (let path of darkPath) {
             path.style.fill = clrSecondary;
         }
+        accessSwitch.style.backgroundColor = clrSecondary;
+        accessSpan.style.color = clrPrimary;
 
         //Home objects for light mode
         homeWelcome.style.color = clrSecondary;
@@ -320,5 +327,16 @@ function changeTheme() {
         for (let path of footerPath) {
             path.style.fill = clrPrimary;
         }
+    }
+}
+
+function changeAccess() {
+    accessBool *= -1;
+
+    if (accessBool==1) {
+        document.body.style.fontSize = "1.25rem";
+    }
+    else {
+        document.body.style.fontSize = "1rem";
     }
 }

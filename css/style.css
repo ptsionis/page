@@ -19,7 +19,7 @@ html {
 
 body {
     width: auto;
-    height: 100vh;
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     background-color: var(--clr-primary);
 }
@@ -38,7 +38,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: var(--clr-primary);
     z-index: 1;
     outline: 1px solid var(--clr-alternative);
@@ -149,10 +149,34 @@ input:checked + label:after {
     transform: translateY(-15%);
 }
 
+/* Accessibility switch */
+
+#switches-access {
+    cursor: pointer;
+    margin-left: 30px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    transform: translateY(-40%);
+    background-color: var(--clr-secondary);
+}
+
+#access-span {
+    color: var(--clr-primary);
+}
+
+#access-span:hover {
+    color: var(--clr-alternative) !important;
+}
+
+.switches-access span {
+    color: var(--clr-primary);
+}
+
 /* Home */
 
 .home {
     height: 100vh;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +216,7 @@ input:checked + label:after {
     font-family: 'Poppins', sans-serif;
     letter-spacing: .75px;
     font-weight: 600;
+    text-align: center;
 }
 
 #button-cv-link {
@@ -219,6 +244,7 @@ input:checked + label:after {
 
 .tools {
     height: 100vh;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,17 +263,14 @@ input:checked + label:after {
 
 .tools-wrapper {
     margin-top: 75px;
-    width: 75%;
+    width: 75vw;
     display: flex;
     justify-content: space-between;
 }
 
-#java-svg, #html-svg, #css-svg, #js-svg, #mysql-svg, #photoshop-svg {
-    margin: 0px 10px;
-}
-
 .java-wrapper, .html-wrapper, .css-wrapper, .js-wrapper, .mysql-wrapper, .photoshop-wrapper {
     cursor: pointer;
+    margin: 0px 25px;
 }
 
 .java-wrapper:hover > #java-svg > .java-svg-path, .html-wrapper:hover > #html-svg > .html-svg-path-p,
@@ -257,8 +280,9 @@ input:checked + label:after {
 }
 
 /* Projects */
-.page-3, .page-4 {
+.projects {
     height: 100vh;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,7 +299,7 @@ input:checked + label:after {
 
 .nerdwork {
     margin-top: 75px;
-    width: 75%;
+    width: 75vw;
     display: flex;
 }
 
@@ -325,7 +349,7 @@ input:checked + label:after {
 /* Blackjack */
 
 .blackjack {
-    width: 75%;
+    width: 75vw;
     display: flex;
 }
 
@@ -371,6 +395,7 @@ input:checked + label:after {
     font-weight: 600;
     color: var(--clr-primary);
     background-color: var(--clr-secondary);
+    text-align: center;
 }
 
 #blackjack-play-link {
@@ -386,6 +411,7 @@ input:checked + label:after {
     font-weight: 600;
     color: var(--clr-primary);
     background-color: var(--clr-alternative);
+    text-align: center;
 }
 
 #blackjack-bio span {
@@ -396,7 +422,7 @@ input:checked + label:after {
 
 .footer {
     height: 7.5vh;
-    width: 100%;
+    width: auto;
     background-color: var(--clr-secondary);
 }
 
