@@ -12,11 +12,14 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: auto;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
     background-color: var(--clr-primary);
     transition: all ease .2s;
 }
@@ -155,7 +158,6 @@ input:checked + label:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
 }
 
 .home-info-wrapper {
