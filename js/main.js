@@ -16,9 +16,7 @@ const homeWelcome = document.getElementById("home-welcome");
 const homeName = document.getElementById("home-name");
 const homeBio = document.getElementById("home-bio");
 const buttonCvLink = document.getElementById("button-cv-link");
-const buttonGithub = document.getElementById("button-github");
 const buttonGithubLink = document.getElementById("button-github-link");
-const buttonLinkedin = document.getElementById("button-linkedin");
 const buttonLinkedinLink = document.getElementById("button-linkedin-link");
 
 //Tools objects
@@ -99,11 +97,11 @@ function changeTheme() {
         homeWelcome.style.color = clrPrimary;
         homeName.style.color = clrPrimary;
         homeBio.style.color = clrPrimary;
-        buttonGithub.style.backgroundColor = clrPrimary;
         buttonGithubLink.style.color = clrSecondary;
-        buttonLinkedin.style.backgroundColor = clrSecondary;
-        buttonLinkedin.style.outline = "1px solid ".concat(clrPrimary);
+        buttonGithubLink.style.backgroundColor = clrPrimary;
+        buttonLinkedinLink.style.outline = "1px solid ".concat(clrPrimary);
         buttonLinkedinLink.style.color = clrPrimary;
+        buttonLinkedinLink.style.backgroundColor = clrSecondary;
 
         //Tools object for dark mode
         toolsTitle.style.color = clrPrimary;
@@ -143,8 +141,6 @@ function changeTheme() {
         toolsLink.style.color = clrSecondary;
         projectLink.style.color = clrSecondary;
         contactLink.style.color = clrSecondary;
-        buttonGithub.style.backgroundColor = clrSecondary;
-        buttonGithubLink.style.color = clrPrimary;
         for (let span of langSpan) {
             span.style.color = clrSecondary;
         }
@@ -156,8 +152,10 @@ function changeTheme() {
         homeWelcome.style.color = clrSecondary;
         homeName.style.color = clrSecondary;
         homeBio.style.color = clrSecondary;
-        buttonLinkedin.style.backgroundColor = clrPrimary;
-        buttonLinkedin.style.outline = "1px solid ".concat(clrSecondary);
+        buttonGithubLink.style.color = clrPrimary;
+        buttonGithubLink.style.backgroundColor = clrSecondary;
+        buttonLinkedinLink.style.backgroundColor = clrPrimary;
+        buttonLinkedinLink.style.outline = "1px solid ".concat(clrSecondary);
         buttonLinkedinLink.style.color = clrSecondary;
 
         //Tools object for dark mode

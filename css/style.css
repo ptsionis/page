@@ -182,40 +182,32 @@ input:checked + label:after {
     margin-top: 50px;
 }
 
-#button-cv, #button-github, #button-linkedin {
+#button-cv-link, #button-github-link, #button-linkedin-link {
     cursor: pointer;
     margin-right: 15px;
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
+    font-size: .8rem;
     font-family: 'Poppins', sans-serif;
     letter-spacing: .75px;
     font-weight: 600;
 }
 
-#button-cv {
+#button-cv-link {
+    color: var(--clr-primary);
     background-color: var(--clr-alternative);
 }
 
-#button-github {
+#button-github-link {
+    color: var(--clr-primary);
     background-color: var(--clr-secondary);
 }
 
-#button-linkedin {
+#button-linkedin-link {
+    color: var(--clr-secondary);
     background-color: var(--clr-primary);
     outline: 1px solid var(--clr-secondary);
-}
-
-#button-cv a {
-    color: var(--clr-primary);
-}
-
-#button-github a {
-    color: var(--clr-primary);
-}
-
-#button-linkedin a {
-    color: var(--clr-secondary);
 }
 
 #me-img {
