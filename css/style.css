@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all ease .3s;
 }
 
 html {
@@ -21,7 +22,6 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: var(--clr-primary);
-    transition: all ease .2s;
 }
 
 ul {
@@ -41,8 +41,7 @@ header {
     width: 100%;
     background-color: var(--clr-primary);
     z-index: 1;
-    outline: 1px solid red;
-    transition: all ease .3s;
+    outline: 1px solid var(--clr-alternative);
 }
 
 .top-nav {
@@ -66,13 +65,12 @@ header {
     display: flex;
     font-size: .9rem;
     letter-spacing: 1px;
-    color: rgba(30, 30, 30, 1);
+    color: var(--clr-secondary);
 }
 
 .top-nav-li a:hover {
     cursor: pointer;
-    color: rgba(237, 7, 53, 1) !important;
-    transition: all ease .3s;
+    color: var(--clr-alternative) !important;
 }
 
 /* Switches */
@@ -108,7 +106,6 @@ label {
     display: block;
     border-radius: 100px;
     position: relative;
-    transition: all ease .4s;
 }
 
 /* Circle */
@@ -121,12 +118,10 @@ label:after {
     height: 14px;
     background: var(--clr-primary);
     border-radius: 90px;
-    transition: .4s;
 }
 
 input:checked + label {
     background: var(--clr-alternative);
-    transition: all ease .4s;
 }
 
 input:checked + label:after {
@@ -237,7 +232,6 @@ input:checked + label:after {
     font-size: 4rem;
     color: var(--clr-secondary);
     text-align: center;
-    transition: all ease .3s;
 }
 
 #tools-title span {
@@ -253,8 +247,4 @@ input:checked + label:after {
 
 #java-svg, #html-svg, #css-svg, #js-svg, #mysql-svg, #photoshop-svg {
     margin: 0px 10px;
-}
-
-#java-svg path, #html-svg path, #css-svg path, #js-svg path, #mysql-svg path, #photoshop-svg path {
-    transition: all ease .3s;
 }
