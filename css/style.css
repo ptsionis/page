@@ -97,6 +97,7 @@ input[type=checkbox] {
 }
 
 /* Wrapper */
+
 label {
     cursor: pointer;
     text-indent: -9999px;
@@ -109,6 +110,7 @@ label {
 }
 
 /* Circle */
+
 label:after {
     content: '';
     position: absolute;
@@ -148,6 +150,7 @@ input:checked + label:after {
 }
 
 /* Home */
+
 .home {
     height: 100vh;
     display: flex;
@@ -220,6 +223,8 @@ input:checked + label:after {
     margin-right: 25px;
 }
 
+/* Tools */
+
 .tools {
     height: 100vh;
     display: flex;
@@ -247,4 +252,12 @@ input:checked + label:after {
 
 #java-svg, #html-svg, #css-svg, #js-svg, #mysql-svg, #photoshop-svg {
     margin: 0px 10px;
+}
+
+/* Projects */
+.projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
