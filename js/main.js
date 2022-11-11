@@ -20,7 +20,6 @@ const buttonGithub = document.getElementById("button-github");
 const buttonGithubLink = document.getElementById("button-github-link");
 const buttonLinkedin = document.getElementById("button-linkedin");
 const buttonLinkedinLink = document.getElementById("button-linkedin-link");
-const meImg = document.getElementById("me-img");
 
 //Tools objects
 const toolsTitle = document.getElementById("tools-title");
@@ -105,7 +104,6 @@ function changeTheme() {
         buttonLinkedin.style.backgroundColor = clrSecondary;
         buttonLinkedin.style.outline = "1px solid ".concat(clrPrimary);
         buttonLinkedinLink.style.color = clrPrimary;
-        meImg.src = "./images/mebw-stroke-white.png"
 
         //Tools object for dark mode
         toolsTitle.style.color = clrPrimary;
@@ -147,7 +145,6 @@ function changeTheme() {
         contactLink.style.color = clrSecondary;
         buttonGithub.style.backgroundColor = clrSecondary;
         buttonGithubLink.style.color = clrPrimary;
-        meImg.src = "./images/mebw.png"
         for (let span of langSpan) {
             span.style.color = clrSecondary;
         }
@@ -162,7 +159,6 @@ function changeTheme() {
         buttonLinkedin.style.backgroundColor = clrPrimary;
         buttonLinkedin.style.outline = "1px solid ".concat(clrSecondary);
         buttonLinkedinLink.style.color = clrSecondary;
-        meImg.src = "./images/mebw-stroke-white.png"
 
         //Tools object for dark mode
         toolsTitle.style.color = clrSecondary;
