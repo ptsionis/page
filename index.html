@@ -14,12 +14,17 @@
     <header>
         <!-- Nav wrapper -->
         <nav class="top-nav">
+            <div id="mobile-menu" onclick="changeMenu()">
+                <svg  fill="rgba(30, 30, 30, 1)" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="mobile-menu-path" d="M4 6H20M4 12H20M4 18H20" stroke="rgba(30, 30, 30, 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </svg>
+            </div>
             <!-- Nav menu list -->
             <ul class="top-nav-ul">
                 <li class="top-nav-li"><a href="#page-1" id="nav-li-home">Home</a></li>
                 <li class="top-nav-li"><a href="#page-2" id="nav-li-tools">Tools</a></li>
                 <li class="top-nav-li"><a href="#project-page3" id="nav-li-projects">NerdWork</a></li>
-                <li class="top-nav-li"><a href="#project-page4" id="nav-li-contact">Blackjack</a></li>
+                <li class="top-nav-li"><a href="#project-page4" id="nav-li-project2">Blackjack</a></li>
             </ul>
             <!-- Nav dark and lang switches -->
             <div class="switches">
@@ -72,7 +77,7 @@
             <div class="home-info-wrapper">
                 <h1 id="home-welcome">WELCOME</h1>
                 <h2 id="home-name">My name is <span>Panagiotis</span> Tsionis.</h2>
-                <p id="home-bio">I am an undergraduate student at Applied Informatics Department at <span><a href="https://www.uom.gr/" target="_blank">University of Macedonia</a></span>.</p>
+                <p id="home-bio">I am an undergraduate student at Applied Informatics Department at <span>University of Macedonia</span>.</p>
                 <div class="home-buttons-wrapper">
                     <a href="./files/ptsionis_cv.pdf" id="button-cv-link" download>Download CV</a>
                     <a href="https://github.com/ptsionis" target="_blank" id="button-github-link">GitHub Profile</a>
@@ -141,7 +146,7 @@
                 <div class="nerdwork-info">
                     <h2 id="nerdwork-title"><span>Nerd</span>Work</h2>
                     <div class="nerdwork-text">
-                        <p id="nerdwork-bio">NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for our Software Engineering course.
+                        <p id="nerdwork-bio">NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for my Software Engineering course.
                             Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork
                             in order to keep track of his university courses.<br><br>
                             NerdWork excels when it comes to <span>managing appointments</span> between students and professors, 
@@ -190,7 +195,7 @@
                     <li class="bottom-nav-li"><a href="#page-1" id="bottom-nav-li-home">Home</a></li>
                     <li class="bottom-nav-li"><a href="#page-2" id="bottom-nav-li-tools">Tools</a></li>
                     <li class="bottom-nav-li"><a href="#project-page3" id="bottom-nav-li-projects">Projects</a></li>
-                    <li class="bottom-nav-li"><a href="#page-5" id="bottom-nav-li-contact">Contact</a></li>
+                    <li class="bottom-nav-li"><a href="#page-5" id="bottom-nav-li-project2">Contact</a></li>
                 </ul>
             </nav>
             <div class="footer-social">

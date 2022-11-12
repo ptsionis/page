@@ -1,11 +1,57 @@
+:root {
+    --clr-primary: rgba(248, 242, 242, 1);
+    --clr-secondary: rgba(30, 30, 30, 1);
+    --clr-alternative: rgba(237, 7, 53, 1);
+}
+
 @media screen and (max-width: 480px) {
     /* Remove all images */
     img {
         display: none;
     }
 
+    /* Header changes */
     .top-nav {
-        flex-direction: column;
+        justify-content: center;
+    }
+
+    #mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .top-nav-ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        margin: 10vh 0px 0px 0px;
+        background-color: rgba(30, 30, 30, .97);
+        z-index: 1;
+    }
+
+    .top-nav-li {
+        text-align: center;
+    }
+
+    .top-nav-li a {
+        margin: 0;
+        padding: 0;
+        color: var(--clr-primary);
+    }
+
+    .switches {
+        margin: 0;
+        padding: 0;
+    }
+
+    #dark-svg, #light-svg, .lang-span {
+        margin: 0px 5px;
+    }
+
+    #switches-access {
+        display: none;
     }
 
     /* Home changes */

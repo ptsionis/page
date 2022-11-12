@@ -2,17 +2,20 @@
 
 // Header objects
 const header = document.querySelector("header");
+const topNavUl = document.querySelector(".top-nav-ul");
 const homeLink = document.getElementById("nav-li-home");
 const toolsLink = document.getElementById("nav-li-tools");
-const projectLink = document.getElementById("nav-li-projects");
-const contactLink = document.getElementById("nav-li-contact");
+const nerdworkLink = document.getElementById("nav-li-projects");
+const blackjackLink = document.getElementById("nav-li-project2");
 const langSpan = document.getElementsByClassName("lang-span");
 const darkPath = document.getElementsByClassName("dark-path");
 const langSwitch = document.getElementById("lang-switch");
 const darkSwitch = document.getElementById("dark-switch");
 const accessSwitch = document.getElementById("switches-access");
 const accessSpan = document.getElementById("access-span");
+const mobileMenuPath = document.getElementById("mobile-menu-path");
 let accessBool = -1;
+let changeMenuBool = -1;
 
 //Home objects
 const homeWelcome = document.getElementById("home-welcome");
@@ -69,13 +72,13 @@ function changeLang() {
         //Header text to greek
         homeLink.innerHTML = "Αρχική";
         toolsLink.innerHTML = "Εργαλεία";
-        projectLink.innerHTML = "NerdWork";
-        contactLink.innerHTML = "Εικοσιμία";
+        nerdworkLink.innerHTML = "NerdWork";
+        blackjackLink.innerHTML = "Εικοσιμία";
         
         //Home text to greek
         homeWelcome.innerHTML = "ΚΑΛΩΣ ΗΡΘΑΤΕ";
         homeName.innerHTML = "Ονομάζομαι <span>Παναγιώτης</span> Τσιώνης.";
-        homeBio.innerHTML = "Είμαι προπτυχιακός φοιτητής στο τμήμα Εφαρμοσμένης Πληροφορικής του <span><a href=\"https://www.uom.gr/\" target=\"_blank\">Πανεπιστημίου Μακεδονίας</a></span>."
+        homeBio.innerHTML = "Είμαι προπτυχιακός φοιτητής στο τμήμα Εφαρμοσμένης Πληροφορικής του <span>Πανεπιστημίου Μακεδονίας</span>."
         buttonCvLink.innerHTML = "Λήψη βιογραφικού";
         buttonGithubLink.innerHTML = "Προφίλ GitHub";
         buttonLinkedinLink.innerHTML = "Προφίλ LinkedIn";
@@ -115,13 +118,13 @@ function changeLang() {
         //Header text to english
         homeLink.innerHTML = "Home";
         toolsLink.innerHTML = "Tools";
-        projectLink.innerHTML = "NerdWork";
-        contactLink.innerHTML = "BlackJack";
+        nerdworkLink.innerHTML = "NerdWork";
+        blackjackLink.innerHTML = "BlackJack";
 
         //Home text to english
         homeWelcome.innerHTML = "WELCOME";
         homeName.innerHTML = "My name is <span>Panagiotis</span> Tsionis.";
-        homeBio.innerHTML = "I am an undergraduate student at Applied Informatics Department at <span><a href=\"https://www.uom.gr/\" target=\"_blank\">University of Macedonia</a></span>."
+        homeBio.innerHTML = "I am an undergraduate student at Applied Informatics Department at <span>University of Macedonia</span>."
         buttonCvLink.innerHTML = "Download CV";
         buttonGithubLink.innerHTML = "GitHub Profile";
         buttonLinkedinLink.innerHTML = "LinkedIn Profile";
@@ -133,7 +136,7 @@ function changeLang() {
         projectsTitle.innerHTML = "Projects";
 
         //Nerdwork text to english
-        nerdworkBio.innerHTML = "NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for our Software Engineering course."
+        nerdworkBio.innerHTML = "NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for my Software Engineering course."
         + " Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork in order to keep track of his university courses.<br><br>"
         + "NerdWork excels when it comes to <span>managing appointments</span> between students and professors, helping both sides manage their appointments with ease,"
         + " <span>without</span> the need of <span>direct and simultaneous communication</span>.<br>Further information can be found in GitHub repository.<br><br>"
@@ -164,10 +167,11 @@ function changeTheme() {
         //Body and header objects for dark mode
         document.body.style.backgroundColor = clrSecondary;
         header.style.backgroundColor = clrSecondary;
+        mobileMenuPath.style.stroke = clrPrimary;
         homeLink.style.color = clrPrimary;
         toolsLink.style.color = clrPrimary;
-        projectLink.style.color = clrPrimary;
-        contactLink.style.color = clrPrimary;
+        nerdworkLink.style.color = clrPrimary;
+        blackjackLink.style.color = clrPrimary;
         for (let span of langSpan) {
             span.style.color = clrPrimary;
         }
@@ -248,10 +252,14 @@ function changeTheme() {
         //Body and header objects for light mode
         document.body.style.backgroundColor = clrPrimary;
         header.style.backgroundColor = clrPrimary;
-        homeLink.style.color = clrSecondary;
-        toolsLink.style.color = clrSecondary;
-        projectLink.style.color = clrSecondary;
-        contactLink.style.color = clrSecondary;
+        mobileMenuPath.style.stroke = clrSecondary;
+        // If mobile menu is open, do not make nav li items' color secondary 
+        if (!changeMenuBool) {
+            homeLink.style.color = clrSecondary;
+            toolsLink.style.color = clrSecondary;
+            nerdworkLink.style.color = clrSecondary;
+            blackjackLink.style.color = clrSecondary;
+        }
         for (let span of langSpan) {
             span.style.color = clrSecondary;
         }
@@ -330,6 +338,7 @@ function changeTheme() {
     }
 }
 
+// Makes font bigger or smaller
 function changeAccess() {
     accessBool *= -1;
 
@@ -338,5 +347,22 @@ function changeAccess() {
     }
     else {
         document.body.style.fontSize = "1rem";
+    }
+}
+
+// Opens or closes the mobile menu
+function changeMenu() {
+    changeMenuBool *= -1;
+
+    homeLink.style.color = clrPrimary;
+    toolsLink.style.color = clrPrimary;
+    nerdworkLink.style.color = clrPrimary;
+    blackjackLink.style.color = clrPrimary;
+
+    if (changeMenuBool==1) {
+        topNavUl.style.display = "block";
+    }
+    else {
+        topNavUl.style.display = "none";
     }
 }
