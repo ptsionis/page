@@ -69,8 +69,8 @@ function changeLang() {
         //Header text to greek
         homeLink.innerHTML = "Αρχική";
         toolsLink.innerHTML = "Εργαλεία";
-        projectLink.innerHTML = "Πρότζεκτς";
-        contactLink.innerHTML = "Επικοινωνία";
+        projectLink.innerHTML = "NerdWork";
+        contactLink.innerHTML = "Εικοσιμία";
         
         //Home text to greek
         homeWelcome.innerHTML = "ΚΑΛΩΣ ΗΡΘΑΤΕ";
@@ -115,8 +115,8 @@ function changeLang() {
         //Header text to english
         homeLink.innerHTML = "Home";
         toolsLink.innerHTML = "Tools";
-        projectLink.innerHTML = "Projects";
-        contactLink.innerHTML = "Contact";
+        projectLink.innerHTML = "NerdWork";
+        contactLink.innerHTML = "BlackJack";
 
         //Home text to english
         homeWelcome.innerHTML = "WELCOME";

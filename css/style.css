@@ -183,7 +183,6 @@ input:checked + label:after {
 }
 
 .home-info-wrapper {
-    transform: translateY(-20%);
     margin: 0px 25px;
 }
 
@@ -377,7 +376,7 @@ input:checked + label:after {
     margin-bottom: 20px;
 }
 
-.blackjackLinks {
+.blackjack-links {
     display: flex;
     justify-content: center;
 }
@@ -421,6 +420,9 @@ input:checked + label:after {
 /* Footer */
 
 .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
     height: 7.5vh;
     width: auto;
     background-color: var(--clr-secondary);

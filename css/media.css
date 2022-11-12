@@ -1,0 +1,105 @@
+@media screen and (max-width: 480px) {
+    /* Remove all images */
+    img {
+        display: none;
+    }
+
+    .top-nav {
+        flex-direction: column;
+    }
+
+    /* Home changes */
+    .home-info-wrapper {
+        transform: translateY(5%);
+    }
+
+    #home-welcome {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    #home-name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #home-bio {
+        text-align: center;
+    }
+
+    .home-buttons-wrapper {
+        flex-direction: column;
+    }
+
+    #button-cv-link, #button-github-link, #button-linkedin-link {
+        margin: 20px 0px;
+    }
+
+    /* Tools changes */
+    #tools-title {
+        font-size: 2.5rem;
+    }
+
+    .tools-wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 20px;
+    }
+
+    .tools-wrapper > * > svg {
+        width: 125%;
+        height: 125%;
+    }
+
+    /* Projects changes */
+    #projects-title {
+        display: none;
+    }
+
+    .nerdwork, .blackjack {
+        margin-top: 10px;
+    }
+
+    .nerdwork-info, .blackjack-info {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        transform: translateY(5%);
+    }
+
+    #nerdwork-title, #blackjack-title {
+        font-size: 1.5rem;
+    }
+
+    .blackjack-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #blackjack-github-link, #blackjack-play-link {
+        margin: 7.5px 0px;
+        width: 100%;
+    }
+
+    /* Footer changes */
+    .bottom-nav-ul, .footer-social {
+        display: none;
+    }
+
+    .footer-wrapper{
+        margin: 0;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
