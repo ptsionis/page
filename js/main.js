@@ -87,11 +87,11 @@ function changeLang() {
         projectsTitle.innerHTML = "Πρότζεκτς";
 
         //Nerdwork text to greek
-        nerdworkBio.innerHTML = "Το NerdWork είναι ένα ομαδικό πρότζεκτ, φτιαγμένο σε <span>Java</span>, το οποίο δημιουργήθηκε στα πλαίσια του μαθήματος Τεχνολογίας Λογισμικού."
+        nerdworkBio.innerHTML = "Το NerdWork είναι ένα ομαδικό πρότζεκτ, φτιαγμένο σε <span>Java</span> και <span>PHP</span>, το οποίο δημιουργήθηκε στα πλαίσια του μαθήματος Τεχνολογίας Λογισμικού."
         + " Κάθε φοιτητής που κατέχει ένα ακαδημαϊκό email του τμήματος Εφαρμοσμένης Πληροφορικής, μπορεί να εγγραφεί και να χρησιμοποιεί το NerdWork για να παρατηρεί την πορεία των"
         + " μαθημάτων του.<br><br>"
         + "Το NerdWork διαπρέπει στο κομμάτι <span>προγραμματισμού ραντεβού</span> μεταξύ φοιτητών και καθηγητών, βοηθώντας αμφότερους στην διαχείριση των ραντεβού με ευκολία,"
-        + " <span>χωρίς</span> την ανάγκη για <span>άμεση και ταυτόχρονη επικοινωνία</span>.";
+        + " <span>χωρίς</span> την ανάγκη για <span>άμεση και ταυτόχρονη επικοινωνία</span>.<br>Περαιτέρω πληροφορίες μπορούν να βρεθούν στο GitHub repository.<br><br>";
         nerdworkAward.innerHTML = "Το NerdWork βραβεύτηκε ως ένα από τα <span>Top-3</span> πρότζεκτ στο μάθημα της Τεχνολογίας Λογισμικού για την ακαδημαϊκή χρονιά 2021 - 2022.";
         nerdworkGithubLink.innerHTML = "NerdWork στο GitHub";
 
@@ -133,10 +133,10 @@ function changeLang() {
         projectsTitle.innerHTML = "Projects";
 
         //Nerdwork text to english
-        nerdworkBio.innerHTML = "NerdWork is a team project, built with <span>Java</span>, that was created for our Software Engineering course."
+        nerdworkBio.innerHTML = "NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for our Software Engineering course."
         + " Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork in order to keep track of his university courses.<br><br>"
         + "NerdWork excels when it comes to <span>managing appointments</span> between students and professors, helping both sides manage their appointments with ease,"
-        + " <span>without</span> the need of <span>direct and simultaneous communication</span>.<br>"
+        + " <span>without</span> the need of <span>direct and simultaneous communication</span>.<br>Further information can be found in GitHub repository.<br><br>"
         nerdworkAward.innerHTML = "NerdWork was awarded as one of the <span>Top-3</span> projects in our Software Engineering course for the academic year 2021 - 2022.";
         nerdworkGithubLink.innerHTML = "NerdWork on GitHub";
 
