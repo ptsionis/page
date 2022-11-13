@@ -13,6 +13,7 @@ const langSwitch = document.getElementById("lang-switch");
 const darkSwitch = document.getElementById("dark-switch");
 const accessSwitch = document.getElementById("switches-access");
 const accessSpan = document.getElementById("access-span");
+const mobileMenu = document.getElementById("mobile-menu");
 const mobileMenuPath = document.getElementById("mobile-menu-path");
 let accessBool = -1;
 let changeMenuBool = -1;
@@ -58,7 +59,7 @@ const footerCopy = document.getElementById("footer-copy");
 const footerNavHome = document.getElementById("bottom-nav-li-home");
 const footerNavTools = document.getElementById("bottom-nav-li-tools");
 const footerNavProjects = document.getElementById("bottom-nav-li-projects");
-const footerNavContact = document.getElementById("bottom-nav-li-contact");
+const footerNavProject2 = document.getElementById("bottom-nav-li-project2");
 const footerPath = document.getElementsByClassName("footer-path");
 
 //Color palette
@@ -111,8 +112,8 @@ function changeLang() {
         //Footer text to greek
         footerNavHome.innerHTML = "Αρχική";
         footerNavTools.innerHTML = "Εργαλεία";
-        footerNavProjects.innerHTML = "Πρότζεκτς";
-        footerNavContact.innerHTML = "Επικοινωνία";
+        footerNavProjects.innerHTML = "NerdWork";
+        footerNavProject2.innerHTML = "Εικοσιμία";
     }
     else {
         //Header text to english
@@ -156,8 +157,8 @@ function changeLang() {
         //Footer text to english
         footerNavHome.innerHTML = "Home";
         footerNavTools.innerHTML = "Tools";
-        footerNavProjects.innerHTML = "Projects";
-        footerNavContact.innerHTML = "Contact";
+        footerNavProjects.innerHTML = "NerdWork";
+        footerNavProject2.innerHTML = "BlackJack";
     }
 }
 
@@ -167,7 +168,9 @@ function changeTheme() {
         //Body and header objects for dark mode
         document.body.style.backgroundColor = clrSecondary;
         header.style.backgroundColor = clrSecondary;
-        mobileMenuPath.style.stroke = clrPrimary;
+        if (changeMenuBool!=1) {
+            mobileMenuPath.style.stroke = clrPrimary;
+        }
         homeLink.style.color = clrPrimary;
         toolsLink.style.color = clrPrimary;
         nerdworkLink.style.color = clrPrimary;
@@ -243,7 +246,7 @@ function changeTheme() {
         footerNavHome.style.color = clrSecondary;
         footerNavTools.style.color = clrSecondary;
         footerNavProjects.style.color = clrSecondary;
-        footerNavContact.style.color = clrSecondary;
+        footerNavProject2.style.color = clrSecondary;
         for (let path of footerPath) {
             path.style.fill = clrSecondary;
         }
@@ -252,9 +255,11 @@ function changeTheme() {
         //Body and header objects for light mode
         document.body.style.backgroundColor = clrPrimary;
         header.style.backgroundColor = clrPrimary;
-        mobileMenuPath.style.stroke = clrSecondary;
+        if (changeMenuBool!=1) {
+            mobileMenuPath.style.stroke = clrSecondary;
+        }
         // If mobile menu is open, do not make nav li items' color secondary 
-        if (!changeMenuBool) {
+        if (changeMenuBool!=1) {
             homeLink.style.color = clrSecondary;
             toolsLink.style.color = clrSecondary;
             nerdworkLink.style.color = clrSecondary;
@@ -331,7 +336,7 @@ function changeTheme() {
         footerNavHome.style.color = clrPrimary;
         footerNavTools.style.color = clrPrimary;
         footerNavProjects.style.color = clrPrimary;
-        footerNavContact.style.color = clrPrimary;
+        footerNavProject2.style.color = clrPrimary;
         for (let path of footerPath) {
             path.style.fill = clrPrimary;
         }
@@ -352,17 +357,31 @@ function changeAccess() {
 
 // Opens or closes the mobile menu
 function changeMenu() {
-    changeMenuBool *= -1;
+    // Menu icon and nav list changes will be made only if user's screen is smaller than a specific number of pixels
+    // This help to avoid problems with the top nav list when user visits the page from a desktop screen
+    if (window.innerWidth <= 768) {
+        changeMenuBool *= -1;
 
-    homeLink.style.color = clrPrimary;
-    toolsLink.style.color = clrPrimary;
-    nerdworkLink.style.color = clrPrimary;
-    blackjackLink.style.color = clrPrimary;
+        homeLink.style.color = clrPrimary;
+        toolsLink.style.color = clrPrimary;
+        nerdworkLink.style.color = clrPrimary;
+        blackjackLink.style.color = clrPrimary;
 
-    if (changeMenuBool==1) {
-        topNavUl.style.display = "block";
-    }
-    else {
-        topNavUl.style.display = "none";
+        if (changeMenuBool==1) {
+            topNavUl.style.display = "block";
+            mobileMenu.style.transform = "rotate(180deg)";
+            mobileMenuPath.style.stroke = clrAlternative;
+        }
+        else {
+            topNavUl.style.display = "none";
+            mobileMenu.style.transform = "rotate(0deg)";
+            // If user closes menu and site is in dark morde, then make menu icon white, else dark grey
+            if (darkSwitch.checked) {
+                mobileMenuPath.style.stroke = clrPrimary;
+            }
+            else {
+                mobileMenuPath.style.stroke = clrSecondary;
+            }
+        }
     }
 }
