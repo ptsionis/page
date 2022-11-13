@@ -247,6 +247,9 @@
 }
 
 @media (max-height: 800px) {
+    #nerdwork-img, #blackjack-img {
+        display: none;
+    }
 
     #home-name, #home-bio {
         font-size: 1rem;
@@ -256,6 +259,15 @@
         font-size: 1.5rem;
         margin-top: 10vh;
         margin-bottom: 5px;
+    }
+
+    #me-img {
+        content: url('../images/mebw-stroke-white-resized-md.png');
+        margin-top: 100px;
+    }
+
+    #button-cv-link, #button-github-link, #button-linkedin-link {
+        margin: 5px 5px;
     }
 
     #tools-title {
@@ -275,6 +287,10 @@
         transform: translate(0);
     }
 
+    #footer-copy {
+        font-size: .8rem;
+    }
+
     .home, .tools, .projects, .nerdwork, .blackjack, .footer {
         height: auto;
     }
@@ -284,6 +300,6 @@
     }
 
     #blackjack-title {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 }
