@@ -332,8 +332,14 @@ input:checked + label:after {
     font-weight: 600;
 }
 
+.nerdwork-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #nerdwork-github-link {
-    margin: auto;
     cursor: pointer;
     width: fit-content;
     padding: 10px 15px;

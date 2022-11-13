@@ -4,7 +4,7 @@
     --clr-alternative: rgba(237, 7, 53, 1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     /* Remove all images */
     img {
         display: none;
@@ -103,27 +103,26 @@
         display: none;
     }
 
-    .nerdwork, .blackjack {
-        margin-top: 10px;
+    .nerdowrk, .blackjack {
+        margin: 0;
     }
 
     .nerdwork-info, .blackjack-info {
         margin-left: 0;
         margin-right: 0;
         text-align: center;
-        transform: translateY(5%);
     }
 
     #nerdwork-title, #blackjack-title {
         font-size: 1.5rem;
     }
 
-    .blackjack-links {
+    .nerdwork-links, .blackjack-links {
         flex-direction: column;
         align-items: center;
     }
 
-    #blackjack-github-link, #blackjack-play-link {
+    #nerdwork-github-link, #blackjack-github-link, #blackjack-play-link {
         margin: 7.5px 0px;
         width: 100%;
     }
@@ -144,12 +143,147 @@
         width: 100%;
         height: 100%;
     }
+
+    #switches-access {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 1024px) {
-    
+@media screen and (min-width: 769px) and (max-width: 900px) {
+    #switches-access {
+        display: none;
+    }
+
+    .java-wrapper, .html-wrapper, .css-wrapper, .js-wrapper, .mysql-wrapper, .photoshop-wrapper {
+        margin: 0px 25px;
+    }
+
+    .tools-wrapper > * > svg {
+        width: 85%;
+        height: 85%;
+    }
+
+    .nerdwork-info, .blackjack-info {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .top-nav-ul {
+        display: flex;
+    }
+
+    #switches-access {
+        display: none;
+    }
+
+    #home-welcome {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    #home-name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #home-bio {
+        text-align: center;
+    }
+
+    .home-buttons-wrapper {
+        flex-direction: column;
+    }
+
+    #button-cv-link, #button-github-link, #button-linkedin-link {
+        margin: 20px 0px;
+    }
+
+    #me-img {
+        display: none;
+    }
+
+    #nerdwork-img, #blackjack-img {
+        display: none;
+    }
+
+    #projects-title {
+        display: none;
+    }
+
+    .nerdwork-info, .blackjack-info {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) { 
+
+    #home-welcome {
+        font-size: 3.25rem;
+    }
+
+    #home-name {
+        font-size: 1.75rem;
+    }
+
+    #me-img {
+        content: url("../images/mebw-stroke-white-resized-md.png");
+    }
+
+    .nerdwork-info, .blackjack-info {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #nerdwork-img, #blackjack-img {
+        display: none;
+    }
     
+    #projects-title {
+        display: none;
+    }
+}
+
+@media (max-height: 800px) {
+
+    #home-name, #home-bio {
+        font-size: 1rem;
+    }
+
+    #home-welcome, #tools-title {
+        font-size: 1.5rem;
+        margin-top: 10vh;
+        margin-bottom: 5px;
+    }
+
+    #tools-title {
+        margin-bottom: 30px;
+    }
+
+    .tools-wrapper {
+        margin: 0;
+    }
+
+    .footer {
+        margin-top: 20px;
+        padding: 5px 0px;
+    }
+
+    .footer-wrapper {
+        transform: translate(0);
+    }
+
+    .home, .tools, .projects, .nerdwork, .blackjack, .footer {
+        height: auto;
+    }
+
+    #nerdwork-title {
+        margin-top: 20px;
+    }
+
+    #blackjack-title {
+        margin-top: 50px;
+    }
 }

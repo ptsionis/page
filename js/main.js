@@ -22,6 +22,7 @@ let changeMenuBool = -1;
 const homeWelcome = document.getElementById("home-welcome");
 const homeName = document.getElementById("home-name");
 const homeBio = document.getElementById("home-bio");
+const meImg = document.getElementById("me-img");
 const buttonCvLink = document.getElementById("button-cv-link");
 const buttonGithubLink = document.getElementById("button-github-link");
 const buttonLinkedinLink = document.getElementById("button-linkedin-link");
@@ -54,7 +55,7 @@ const blackjackGithubLink = document.getElementById("blackjack-github-link");
 const blackjackPlayLink = document.getElementById("blackjack-play-link");
 
 //Footer objects
-const footer = document.getElementById("page-5");
+const footer = document.getElementById("footer");
 const footerCopy = document.getElementById("footer-copy");
 const footerNavHome = document.getElementById("bottom-nav-li-home");
 const footerNavTools = document.getElementById("bottom-nav-li-tools");
@@ -359,7 +360,7 @@ function changeAccess() {
 function changeMenu() {
     // Menu icon and nav list changes will be made only if user's screen is smaller than a specific number of pixels
     // This help to avoid problems with the top nav list when user visits the page from a desktop screen
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 900) {
         changeMenuBool *= -1;
 
         homeLink.style.color = clrPrimary;
