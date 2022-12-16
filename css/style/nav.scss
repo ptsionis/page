@@ -45,6 +45,11 @@
     #nav-switch {
         margin: 0 5vw;
         display: flex;
+        
+        #sun-svg {
+            margin: 0px 5px 0 0;
+        }
+
         input[type=checkbox] {
             height: 0;
             width: 0;
@@ -78,6 +83,7 @@
             transform: translateX(-100%);
             background: clr.$clrPrimary;
         }
+
         #moon-svg {
             margin: 2px 0 0 5px;
         }
