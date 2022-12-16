@@ -1,0 +1,62 @@
+@use 'colors' as clr;
+@use 'fonts' as ff;
+@use 'section' as sec;
+@use 'button' as btn;
+
+@mixin home-element($ff-size) {
+    color: clr.$clrSecondary;
+    text: {
+        align: center;
+    }
+    font: {
+        size: $ff-size;
+    }
+    span {
+        color: clr.$clrAlternative;
+    }
+}
+
+#home {
+    @include sec.section();
+
+    #home-wrapper {
+        width: 100%;
+        height: calc(100vh - 6.5vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #home-title {
+            @include home-element(4.5vw);
+        }
+
+        #home-name {
+            @include home-element(1.75vw);
+        }
+
+        #home-bio {
+            @include home-element(1vw);
+        }
+
+        #home-links-wrapper {
+            display: flex;
+            margin: 2.5vh 0;
+
+            #home-cv-link {
+                @include btn.button(clr.$clrPrimary, clr.$clrAlternative, clr.$clrAlternative);
+                margin: 0 1vw;
+            }
+
+            #home-github-link {
+                @include btn.button(clr.$clrPrimary, clr.$clrSecondary, clr.$clrSecondary);
+                margin: 0 1vw;
+            }
+
+            #home-linkedin-link {
+                @include btn.button(clr.$clrSecondary, clr.$clrPrimary, clr.$clrSecondary);
+                margin: 0 1vw;
+            }
+        }
+    }
+}

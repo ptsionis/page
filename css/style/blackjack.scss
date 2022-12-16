@@ -1,0 +1,18 @@
+@use 'colors' as clr;
+@use 'section' as sec;
+@use 'button' as btn;
+@use 'project' as pr;
+
+#blackjack {
+    @include sec.section();
+
+    @include pr.project(row, end);
+
+    // #blackjack-outwrapper {
+    //     #blackjack-links {
+    //         #blackjack-play-link {
+    //             background-color: green;
+    //         }
+    //     }
+    // }
+}

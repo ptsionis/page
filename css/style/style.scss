@@ -1,0 +1,30 @@
+@use 'colors' as clr;
+@use 'fonts' as ff;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all ease .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: {
+        family: ff.$ff;
+    }
+    background: {
+        color: clr.$clrPrimary;
+    }
+
+    @import './nav';
+    @import './home';
+    @import './tools';
+    @import './nerdwork';
+    @import './kokfilms';
+    @import './blackjack';
+    @import './footer';
+}

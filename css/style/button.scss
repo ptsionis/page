@@ -1,0 +1,26 @@
+@use 'colors' as clr;
+
+@mixin button($ff-color, $bg-color, $border-color) {
+    color: $ff-color;
+    background-color: $bg-color;
+    padding: 7.5px 17.5px;
+    letter-spacing: .75px;
+    border: {
+        style: solid;
+        width: 3px;
+        radius: 15px;
+        color: $border-color;
+    }
+    font: {
+        size: 1vw;
+        weight: 600;
+    }
+    text: {
+        align: center;
+        decoration: none;
+    }
+    &:hover {
+        transition: all .1s ease !important;
+        box-shadow: 2px 2px 1px clr.$clrSecondary, 2px 2px 1px clr.$clrSecondary;
+    }
+}

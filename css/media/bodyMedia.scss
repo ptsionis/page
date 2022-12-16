@@ -1,0 +1,19 @@
+@use 'navMedia' as nav;
+@use 'homeMedia' as home;
+@use 'toolsMedia' as tools;
+@use 'nerdworkMedia' as nrd;
+@use 'kokfilmsMedia' as kkf;
+@use 'blackjackMedia' as bj;
+@use 'footerMedia' as footer;
+
+@mixin bodyMedia() {
+    body {
+        @include nav.navMedia();
+        @include home.homeMedia();
+        @include tools.toolsMedia();
+        @include nrd.nerdworkMedia();
+        @include kkf.kokfilmsMedia();
+        @include bj.blackjackMedia();
+        @include footer.footerMedia();
+    }
+}

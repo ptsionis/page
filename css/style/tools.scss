@@ -1,0 +1,94 @@
+@use 'colors' as clr;
+@use 'fonts' as ff;
+@use 'section' as sec;
+
+svg-hover {
+    fill: clr.$clrAlternative !important;
+}
+
+#tools {
+    @include sec.section();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #tools-title {
+        color: clr.$clrSecondary;
+        margin: 5vh 0;
+        text: {
+            align: center;
+        }
+        font: {
+            size: 3vw;
+        }
+        span {
+            color: clr.$clrAlternative;
+        }
+    }
+
+    #tools-wrapper {
+        width: 75%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 5vh;
+
+        & > * {
+            margin: auto;
+
+            svg {
+                width: 7.5vw;
+                height: auto;
+            }
+        }
+
+        #html-wrapper:hover {
+            .html-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #css-wrapper:hover {
+            .css-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #sass-wrapper:hover {
+            .sass-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #js-wrapper:hover {
+            .js-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #ts-wrapper:hover {
+            .ts-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #java-wrapper:hover {
+            .java-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #mysql-wrapper:hover {
+            .mysql-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+
+        #ps-wrapper:hover {
+            .ps-svg-path-p {
+                @extend svg-hover;
+            }
+        }
+    }
+}

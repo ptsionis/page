@@ -1,0 +1,28 @@
+@mixin homeMedia() {
+    #home {
+        #home-wrapper {
+            #home-title {
+                font-size: 10vw;
+            }
+
+            #home-name {
+                font-size: 5vw;
+            }
+
+            #home-bio {
+                font-size: 3.5vw;
+            }
+
+            #home-links-wrapper {
+                flex-direction: column;
+                width: 100%;
+
+                #home-cv-link, #home-github-link, #home-linkedin-link {
+                    width: 100%;
+                    margin: 1vh 0;
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+}

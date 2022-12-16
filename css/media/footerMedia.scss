@@ -1,0 +1,9 @@
+@mixin footerMedia() {
+    #footer {
+        #footer-wrapper {
+            #footer-copy {
+                font-size: 2.75vw;
+            }
+        }
+    }
+}

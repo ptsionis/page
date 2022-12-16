@@ -1,0 +1,22 @@
+@use 'colors' as clr;
+
+#footer {
+    position: relative;
+    bottom: 0;
+    height: 6.5vh;
+    width: 100%;
+    margin: 0 auto;
+    background-color: clr.$clrSecondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: .3vw solid clr.$clrAlternative;
+
+    #footer-copy {
+        color: clr.$clrPrimary;
+        font: {
+            size: .75vw;
+            weight: 600;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@use 'bodyMedia' as body;
+
+@media screen and (orientation: portrait) {
+    @include body.bodyMedia();
+}

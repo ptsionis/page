@@ -4,218 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Panagiotis Tsionis</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
+    <title>Panagiotis Tsionis</title>
+    <link rel="stylesheet" href="./css/style/style.css">
+    <link rel="stylesheet" href="./css/media/media.css">
 </head>
-<body>
-
-    <!-- Header section -->
-    <header>
-        <!-- Nav wrapper -->
-        <nav class="top-nav">
-            <div id="mobile-menu" onclick="changeMenu()">
-                <svg  fill="rgba(30, 30, 30, 1)" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path id="mobile-menu-path" d="M4 6H20M4 12H20M4 18H20" stroke="rgba(30, 30, 30, 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                </svg>
-            </div>
-            <!-- Nav menu list -->
-            <ul class="top-nav-ul">
-                <li class="top-nav-li"><a href="#page-1" id="nav-li-home" onclick="changeMenu()">Home</a></li>
-                <li class="top-nav-li"><a href="#page-2" id="nav-li-tools" onclick="changeMenu()">Tools</a></li>
-                <li class="top-nav-li"><a href="#page-3" id="nav-li-projects" onclick="changeMenu()">NerdWork</a></li>
-                <li class="top-nav-li"><a href="#page-4" id="nav-li-project2" onclick="changeMenu()">Blackjack</a></li>
-            </ul>
-            <!-- Nav dark and lang switches -->
-            <div class="switches">
-                <!-- Dark switch -->
-                <div class="switches-dark">
-                    <!-- Sun svg -->
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve" id="light-svg">
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                            <path class="dark-path" d="M 45 68 c -12.682 0 -23 -10.317 -23 -23 c 0 -12.682 10.318 -23 23 -23 c 12.683 0 23 10.318 23 23 C 68 57.683 57.683 68 45 68 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 45 17.556 c -1.657 0 -3 -1.343 -3 -3 V 3 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 v 11.556 C 48 16.212 46.657 17.556 45 17.556 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 45 90 c -1.657 0 -3 -1.343 -3 -3 V 75.444 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 V 87 C 48 88.657 46.657 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 14.556 48 H 3 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 11.556 c 1.657 0 3 1.343 3 3 C 17.556 46.657 16.212 48 14.556 48 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 87 48 H 75.444 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 H 87 c 1.657 0 3 1.343 3 3 C 90 46.657 88.657 48 87 48 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 66.527 26.473 c -0.768 0 -1.535 -0.293 -2.121 -0.878 c -1.172 -1.172 -1.172 -3.071 0 -4.243 l 8.171 -8.171 c 1.172 -1.172 3.07 -1.171 4.242 0 c 1.172 1.172 1.172 3.071 0 4.243 l -8.171 8.171 C 68.063 26.18 67.295 26.473 66.527 26.473 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 15.302 77.698 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 8.171 -8.171 c 1.171 -1.172 3.071 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -8.171 8.171 C 16.837 77.405 16.069 77.698 15.302 77.698 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 23.473 26.473 c -0.768 0 -1.536 -0.293 -2.121 -0.878 l -8.171 -8.171 c -1.172 -1.172 -1.172 -3.071 0 -4.243 c 1.172 -1.172 3.072 -1.171 4.243 0 l 8.171 8.171 c 1.172 1.172 1.172 3.071 0 4.243 C 25.008 26.18 24.24 26.473 23.473 26.473 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            <path class="dark-path" d="M 74.698 77.698 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -8.171 -8.171 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.172 -1.172 3.07 -1.172 4.242 0 l 8.171 8.171 c 1.172 1.171 1.172 3.071 0 4.242 C 76.233 77.405 75.466 77.698 74.698 77.698 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        </g>
-                    </svg>
-                    <!-- Toggler -->
-                    <input type="checkbox" id="dark-switch" onclick="changeTheme()"><label for="dark-switch"></label>
-                    <!-- Moon svg -->
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve" id="dark-svg">
-                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                            <path class="dark-path" d="M 87.823 60.7 c -0.463 -0.423 -1.142 -0.506 -1.695 -0.214 c -15.834 8.398 -35.266 2.812 -44.232 -12.718 c -8.966 -15.53 -4.09 -35.149 11.101 -44.665 c 0.531 -0.332 0.796 -0.963 0.661 -1.574 c -0.134 -0.612 -0.638 -1.074 -1.259 -1.153 c -9.843 -1.265 -19.59 0.692 -28.193 5.66 C 13.8 12.041 6.356 21.743 3.246 33.35 S 1.732 57.08 7.741 67.487 c 6.008 10.407 15.709 17.851 27.316 20.961 C 38.933 89.486 42.866 90 46.774 90 c 7.795 0 15.489 -2.044 22.42 -6.046 c 8.601 -4.966 15.171 -12.43 18.997 -21.586 C 88.433 61.79 88.285 61.123 87.823 60.7 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgba(30, 30, 30, 1);; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        </g>
-                    </svg>
-                </div>
-                <!-- Lang switch -->
-                <div class="switches-lang">
-                    <!-- English span -->
-                    <span class="lang-span">en</span>
-                    <!-- Toggler -->
-                    <input type="checkbox" id="lang-switch" onclick="changeLang()"><label for="lang-switch"></label>
-                    <!-- Greek span -->
-                    <span class="lang-span">gr</span>
-                </div>
-                <!-- Accessibility switch -->
-                <div id="switches-access" onclick="changeAccess()">
-                    <span id="access-span">A+</span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main section -->
-    <main>
-        <!-- Home section -->
-        <section class="home" id="page-1">
-            <div class="home-info-wrapper">
-                <h1 id="home-welcome">WELCOME</h1>
-                <h2 id="home-name">My name is <span>Panagiotis</span> Tsionis.</h2>
-                <p id="home-bio">I am an undergraduate student at Applied Informatics Department at <span>University of Macedonia</span>.</p>
-                <div class="home-buttons-wrapper">
-                    <a href="./files/ptsionis-cv.pdf" id="button-cv-link" download>Download CV</a>
-                    <a href="https://github.com/ptsionis" target="_blank" id="button-github-link">GitHub Profile</a>
-                    <a href="https://linkedin.com/in/ptsionis" target="_blank" id="button-linkedin-link">LinkedIn Profile</a>
-                </div>
-            </div>
-            <img src="./images/mebw-stroke-white.png" alt="Panagiotis Tsionis" id="me-img">
-        </section>
-        <!-- Tools section -->
-        <section class="tools" id="page-2">
-            <h1 id="tools-title">Tools <span>&</span> Technologies</h1>
-            <div class="tools-wrapper">
-                <!-- Java SVG -->
-                <div class="java-wrapper">
-                    <svg id="java-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
-                        <path class="java-svg-path" d="M11.622 24.74s-1.23.748.855.962c2.51.32 3.847.267 6.625-.267a10.02 10.02 0 0 0 1.763.855c-6.25 2.672-14.16-.16-9.244-1.55zm-.8-3.473s-1.336 1.015.748 1.23c2.725.267 4.862.32 8.55-.427a3.26 3.26 0 0 0 1.282.801c-7.534 2.244-15.976.214-10.58-1.603zm14.747 6.09s.908.748-1.015 1.336c-3.58 1.07-15.014 1.39-18.22 0-1.122-.48 1.015-1.175 1.7-1.282.695-.16 1.07-.16 1.07-.16-1.23-.855-8.175 1.763-3.526 2.51 12.77 2.084 23.296-.908 19.983-2.404zM12.2 17.633s-5.824 1.39-2.084 1.87c1.603.214 4.755.16 7.694-.053 2.404-.214 4.81-.64 4.81-.64s-.855.374-1.443.748c-5.93 1.55-17.312.855-14.052-.748 2.778-1.336 5.076-1.175 5.076-1.175zm10.42 5.824c5.984-3.1 3.206-6.09 1.282-5.717-.48.107-.695.214-.695.214s.16-.32.534-.427c3.794-1.336 6.786 4.007-1.23 6.09 0 0 .053-.053.107-.16zm-9.83 8.442c5.77.374 14.587-.214 14.8-2.94 0 0-.427 1.07-4.755 1.87-4.916.908-11.007.8-14.587.214 0 0 .748.64 4.542.855z" fill="rgba(30, 30, 30, 1)"/>
-                        <path class="java-svg-path" d="M18.996.001s3.313 3.366-3.152 8.442c-5.183 4.114-1.175 6.465 0 9.137-3.046-2.725-5.236-5.13-3.74-7.373C14.294 6.893 20.332 5.3 18.996.001zm-1.7 15.335c1.55 1.763-.427 3.366-.427 3.366s3.954-2.03 2.137-4.542c-1.656-2.404-2.94-3.58 4.007-7.587 0 0-10.953 2.725-5.717 8.763z" fill="rgba(30, 30, 30, 1)"/>
-                    </svg>
-                </div>
-                <!-- HTML SVG -->
-                <div class="html-wrapper">
-                    <svg id="html-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
-                        <path class="html-svg-path-p" d="M4.46 28.802L1.892.001h28.216l-2.57 28.797L15.982 32z" fill="rgba(30, 30, 30, 1)"/>
-                        <path class="html-svg-path-p" d="M25.337 26.964l2.197-24.608H16v27.197z" fill="rgba(30, 30, 30, 1)"/>
-                        <path class="html-svg-path-s" d="M15.988 5.888H7.142l.953 10.682H16v-3.532h-4.674l-.323-3.617H16V5.888zM16 22.2l-.015.004-3.934-1.062-.25-2.817H8.253l.495 5.546 7.236 2 .016-.005z" fill="rgba(248, 242, 242, 1)"/>
-                        <path class="html-svg-path-s" d="M15.988 16.57h4.35l-.4 4.58-3.94 1.063v3.675l7.242-2.007.97-10.845H16zm8.764-9.734l.084-.948h-8.85V9.42h8.532l.07-.794z" fill="rgba(248, 242, 242, 1)"/>
-                    </svg>
-                </div>
-                <!-- CSS SVG -->
-                <div class="css-wrapper">
-                    <svg id="css-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="5 6 38 36" width="100%" height="100%">
-                        <path class="css-svg-path-p" fill="rgba(30, 30, 30, 1)" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"/>
-                        <path class="css-svg-path-p" fill="rgba(30, 30, 30, 1)" d="M24 8L24 39.9 35.2 36.7 37.7 8z"/>
-                        <path class="css-svg-path-s" fill="rgba(248, 242, 242, 1)" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"/>
-                        <path class="css-svg-path-s" fill="rgba(248, 242, 242, 1)" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"/>
-                    </svg>
-                </div>
-                <!-- JS SVG -->
-                <div class="js-wrapper">
-                    <svg id="js-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1052 1052">
-                        <path class="js-svg-path-p" fill="rgba(30, 30, 30, 1)" d="M0 0h1052v1052H0z"/>
-                        <path class="js-svg-path-s" d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z" fill="rgba(248, 242, 242, 1)"/>
-                    </svg>
-                </div>
-                <!-- MySQL SVG -->
-                <div class="mysql-wrapper">
-                    <svg id="mysql-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25.6 25.6">
-                        <path class="mysql-svg-path" d="M179.076 94.886c-3.568-.1-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72l2.855 2.053c1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428l-1.34-1.293c-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.1c.98-.1 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713l2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436l-3.658-7.763c-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.5-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.5.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 15 .715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.1l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.1-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.5-.535-1.294-.178-1.83.088-.357.268-.5.623-.58.58-.5 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.1 4.37.5 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.1h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.1c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z" transform="matrix(.390229 0 0 .38781 -46.300037 -16.856717)" fill-rule="evenodd" fill="rgba(30, 30, 30, 1)"/>
-                    </svg>
-                </div>
-                <!-- Photoshop SVG -->
-                <div class="photoshop-wrapper">
-                    <svg id="photoshop-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 17.469 17.469" style="enable-background:new 0 0 17.469 17.469;" xml:space="preserve">
-                    <path class="photoshop-svg-path" style="fill:rgba(30, 30, 30, 1);" d="M5.925,4.982c-0.442,0-0.742,0.043-0.898,0.087v2.841C5.213,7.952,5.44,7.966,5.754,7.966c1.157,0,1.871-0.585,1.871-1.571C7.624,5.511,7.01,4.982,5.925,4.982z"/>
-                    <path class="photoshop-svg-path" style="fill:rgba(30, 30, 30, 1);" d="M16.4,0.002H1.07C0.479,0.002,0,0.48,0,1.069v15.329c0,0.59,0.479,1.069,1.07,1.069H16.4c0.59,0,1.069-0.479,1.069-1.069V1.07C17.469,0.48,16.99,0.002,16.4,0.002z M8.894,8.624c-0.741,0.7-1.842,1.014-3.125,1.014c-0.287,0-0.543-0.014-0.743-0.043v3.442H2.869V3.541C3.54,3.428,4.482,3.342,5.811,3.342c1.341,0,2.299,0.256,2.94,0.771c0.617,0.486,1.03,1.286,1.03,2.228S9.466,8.08,8.894,8.624z M12.145,13.179c-0.916,0-1.729-0.198-2.258-0.485l0.385-1.556c0.4,0.241,1.229,0.527,1.873,0.527c0.655,0,0.927-0.228,0.927-0.586c0-0.356-0.214-0.527-1.027-0.799c-1.442-0.485-2-1.271-1.986-2.099c0-1.298,1.114-2.286,2.842-2.286c0.814,0,1.542,0.187,1.97,0.4l-0.385,1.5c-0.314-0.172-0.913-0.399-1.514-0.399c-0.527,0-0.826,0.214-0.826,0.571c0,0.328,0.269,0.499,1.126,0.8c1.328,0.456,1.886,1.128,1.899,2.154C15.171,12.222,14.141,13.179,12.145,13.179z"/>
-            </svg></div>
-            </div>
-        </section>
-        <!-- Projects section -->
-        <!-- Project Page1 -->
-        <section class="projects" id="page-3">
-            <h1 id="projects-title">Projects</h1>
-            <!-- NerdWork section -->
-            <section class="nerdwork">
-                <img id="nerdwork-img" src="./images/nerdwork.png" alt="Nerdwork">
-                <div class="nerdwork-info">
-                    <h2 id="nerdwork-title"><span>Nerd</span>Work</h2>
-                    <div class="nerdwork-text">
-                        <p id="nerdwork-bio">NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, that was created for my Software Engineering course.
-                            Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork
-                            in order to keep track of his university courses.<br><br>
-                            NerdWork excels when it comes to <span>managing appointments</span> between students and professors, 
-                            helping both sides manage their appointments with ease, <span>without</span> the 
-                            need of <span>direct and simultaneous communication</span>.<br>Further information can be found in GitHub repository.<br><br>
-                        </p>
-                        <p id="nerdwork-award">NerdWork was awarded as one of the <span>Top-3</span> projects in our Software Engineering course for the
-                            academic year 2021 - 2022.
-                        </p>
-                    </div>
-                    <div class="nerdwork-links">
-                        <a href="https://github.com/Nerdwork-Team/Nerdwork-Project" target="_blank" id="nerdwork-github-link">NerdWork on GitHub</a>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <!-- Project Page 2 -->
-        <section class="projects" id="page-4">
-            <h1 style="display: none;">Project2</h1> <!-- For W3C purposes -->
-            <!-- BlackJack section -->
-            <section class="blackjack">
-                <div class="blackjack-info">
-                    <h2 id="blackjack-title">Black<span>Jack</span></h2>
-                    <div class="blackjack-text">
-                        <p id="blackjack-bio">BlackJack is a web game I created in order to practice my Front-end (and currently Back-end) skills. 
-                            It is built using <span>HTML5</span>, <span>CSS3</span> and <span>JavaScript ES6+</span>.<br><br>
-                            This project is still in <span>BETA</span> version, since there are some bugs that have to be resolved and some new features to be added.<br>
-                            It serves as a project - <span>experiment</span>, where I test various tools and technologies, and I am looking forward to add a local storage database, 
-                            where a player can save his progress and resume from where he left off.
-                        </p>
-                    </div>
-                    <div class="blackjack-links">
-                        <a href="https://github.com/ptsionis/blackjack" target="_blank" id="blackjack-github-link">BlackJack on GitHub</a>
-                        <a href="https://ptsionis.github.io/blackjack/" target="_blank" id="blackjack-play-link">Play BlackJack</a>
-                    </div>
-                </div>
-                <img id="blackjack-img" src="./images/blackjack.png" alt="BlackJack">
-            </section>
-        </section>
-    </main>
-
-    <!-- Footer section -->
-    <footer class="footer" id="footer">
-        <div class="footer-wrapper">
-            <p id="footer-copy">&copy; 2022 Panagiotis Tsionis</p>
-            <nav class="bottom-nav">
-                <ul class="bottom-nav-ul">
-                    <li class="bottom-nav-li"><a href="#page-1" id="bottom-nav-li-home">Home</a></li>
-                    <li class="bottom-nav-li"><a href="#page-2" id="bottom-nav-li-tools">Tools</a></li>
-                    <li class="bottom-nav-li"><a href="#page-3" id="bottom-nav-li-projects">NerdWork</a></li>
-                    <li class="bottom-nav-li"><a href="#page-4" id="bottom-nav-li-project2">BlackJack</a></li>
-                </ul>
-            </nav>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/ptsionis/" target="_blank" id="footer-linkedin">
-                    <svg fill="rgba(248, 242, 242, 1)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25" height="25">
-                        <path class="footer-path" d="M 8 3.0097656 C 4.53 3.0097656 2.0097656 5.0892187 2.0097656 7.9492188 C 2.0097656 10.819219 4.59 12.990234 8 12.990234 C 11.47 12.990234 13.990234 10.870625 13.990234 7.890625 C 13.830234 5.020625 11.36 3.0097656 8 3.0097656 z M 3 15 C 2.45 15 2 15.45 2 16 L 2 45 C 2 45.55 2.45 46 3 46 L 13 46 C 13.55 46 14 45.55 14 45 L 14 16 C 14 15.45 13.55 15 13 15 L 3 15 z M 18 15 C 17.45 15 17 15.45 17 16 L 17 45 C 17 45.55 17.45 46 18 46 L 27 46 C 27.552 46 28 45.552 28 45 L 28 30 L 28 29.75 L 28 29.5 C 28 27.13 29.820625 25.199531 32.140625 25.019531 C 32.260625 24.999531 32.38 25 32.5 25 C 32.62 25 32.739375 24.999531 32.859375 25.019531 C 35.179375 25.199531 37 27.13 37 29.5 L 37 45 C 37 45.552 37.448 46 38 46 L 47 46 C 47.55 46 48 45.55 48 45 L 48 28 C 48 21.53 44.529063 15 36.789062 15 C 33.269062 15 30.61 16.360234 29 17.490234 L 29 16 C 29 15.45 28.55 15 28 15 L 18 15 z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/ptsionis" target="_blank" id="footer-github">
-                    <svg width="25" height="25" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="footer-path" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="rgba(248, 242, 242, 1)"/>
-                    </svg>    
-                </a>
+<body class="bg-clr-p">
+    <div id="nav" class="bg-clr-s">
+        <div id="nav-menu">
+            <svg  fill="#f8fafb" height="24" width="24" viewBox="0 0 24 24">
+                <path id="mobile-menu-path" d="M4 6H20M4 12H20M4 18H20" stroke="#f8fafb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+        </div>
+        <ul id="nav-ul" class="bg-clr-s">
+            <li class="nav-li"><a href="#home" class="clr-p">Home</a></li>
+            <li class="nav-li"><a href="#tools" class="clr-p">Tools</a></li>
+            <li class="nav-li"><a href="#nerdwork" class="clr-p">NerdWork</a></li>
+            <li class="nav-li"><a href="#kokfilms" class="clr-p">KoKFilms</a></li>
+            <li class="nav-li"><a href="#blackjack" class="clr-p">BlackJack</a></li>
+        </ul>
+        <div id="nav-switch">
+            <svg id="sun-svg" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                    <path class="fill-p" d="M 45 68 c -12.682 0 -23 -10.317 -23 -23 c 0 -12.682 10.318 -23 23 -23 c 12.683 0 23 10.318 23 23 C 68 57.683 57.683 68 45 68 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 45 17.556 c -1.657 0 -3 -1.343 -3 -3 V 3 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 v 11.556 C 48 16.212 46.657 17.556 45 17.556 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 45 90 c -1.657 0 -3 -1.343 -3 -3 V 75.444 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 V 87 C 48 88.657 46.657 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 14.556 48 H 3 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 11.556 c 1.657 0 3 1.343 3 3 C 17.556 46.657 16.212 48 14.556 48 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 87 48 H 75.444 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 H 87 c 1.657 0 3 1.343 3 3 C 90 46.657 88.657 48 87 48 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 66.527 26.473 c -0.768 0 -1.535 -0.293 -2.121 -0.878 c -1.172 -1.172 -1.172 -3.071 0 -4.243 l 8.171 -8.171 c 1.172 -1.172 3.07 -1.171 4.242 0 c 1.172 1.172 1.172 3.071 0 4.243 l -8.171 8.171 C 68.063 26.18 67.295 26.473 66.527 26.473 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 15.302 77.698 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 8.171 -8.171 c 1.171 -1.172 3.071 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -8.171 8.171 C 16.837 77.405 16.069 77.698 15.302 77.698 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 23.473 26.473 c -0.768 0 -1.536 -0.293 -2.121 -0.878 l -8.171 -8.171 c -1.172 -1.172 -1.172 -3.071 0 -4.243 c 1.172 -1.172 3.072 -1.171 4.243 0 l 8.171 8.171 c 1.172 1.172 1.172 3.071 0 4.243 C 25.008 26.18 24.24 26.473 23.473 26.473 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path class="fill-p" d="M 74.698 77.698 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -8.171 -8.171 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.172 -1.172 3.07 -1.172 4.242 0 l 8.171 8.171 c 1.172 1.171 1.172 3.071 0 4.242 C 76.233 77.405 75.466 77.698 74.698 77.698 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                </g>
+            </svg>
+            <input id="theme-switch" type="checkbox">
+            <label for="theme-switch"></label>
+            <svg id="moon-svg" width="15" height="15" viewBox="0 0 256 256" xml:space="preserve">
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                    <path class="fill-p" d="M 87.823 60.7 c -0.463 -0.423 -1.142 -0.506 -1.695 -0.214 c -15.834 8.398 -35.266 2.812 -44.232 -12.718 c -8.966 -15.53 -4.09 -35.149 11.101 -44.665 c 0.531 -0.332 0.796 -0.963 0.661 -1.574 c -0.134 -0.612 -0.638 -1.074 -1.259 -1.153 c -9.843 -1.265 -19.59 0.692 -28.193 5.66 C 13.8 12.041 6.356 21.743 3.246 33.35 S 1.732 57.08 7.741 67.487 c 6.008 10.407 15.709 17.851 27.316 20.961 C 38.933 89.486 42.866 90 46.774 90 c 7.795 0 15.489 -2.044 22.42 -6.046 c 8.601 -4.966 15.171 -12.43 18.997 -21.586 C 88.433 61.79 88.285 61.123 87.823 60.7 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #f8fafb; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div id="home">
+        <div id="home-wrapper">
+            <h1 id="home-title" class="clr-s">WELCOME</h1>
+            <h2 id="home-name" class="clr-s">My name is <span>Panagiotis</span> Tsionis.</h2>
+            <h4 id="home-bio" class="clr-s">I am an undergraduate student at Dept. of Applied Informatics at <span>University of Macedonia</span>.</h4>
+            <div id="home-links-wrapper">
+                <a id="home-cv-link" href="./files/ptsionis-cv.pdf" download>Download CV</a>
+                <a id="home-github-link" class="btn-s" href="https://github.com/ptsionis" target="_blank">GitHub Profile</a>
+                <a id="home-linkedin-link" class="btn-p" href="https://linkedin.com/in/ptsionis" target="_blank">LinkedIn Profile</a>
             </div>
         </div>
-    </footer>
-
-    <!-- Scripts -->
+    </div>
+    <div id="tools">
+        <h1 id="tools-title" class="clr-s">Tech Stack <span>&</span> Tools</h1>
+        <div id="tools-wrapper">
+            <div id="html-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 32 32">
+                    <path class="html-svg-path-p fill-s" d="M4.46 28.802L1.892.001h28.216l-2.57 28.797L15.982 32z" fill="#1e1e1e"/>
+                    <path class="html-svg-path-p fill-s" d="M25.337 26.964l2.197-24.608H16v27.197z" fill="#1e1e1e"/>
+                    <path class="html-svg-path-s fill-p" d="M15.988 5.888H7.142l.953 10.682H16v-3.532h-4.674l-.323-3.617H16V5.888zM16 22.2l-.015.004-3.934-1.062-.25-2.817H8.253l.495 5.546 7.236 2 .016-.005z" fill="#fefafb"/>
+                    <path class="html-svg-path-s fill-p" d="M15.988 16.57h4.35l-.4 4.58-3.94 1.063v3.675l7.242-2.007.97-10.845H16zm8.764-9.734l.084-.948h-8.85V9.42h8.532l.07-.794z" fill="#fefafb"/>
+                </svg>
+            </div>
+            <div id="css-wrapper">
+                <svg  viewBox="5 6 38 36" width="100%" height="100%">
+                    <path class="css-svg-path-p fill-s" fill="#1e1e1e" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"/>
+                    <path class="css-svg-path-p fill-s" fill="#1e1e1e" d="M24 8L24 39.9 35.2 36.7 37.7 8z"/>
+                    <path class="css-svg-path-s fill-p" fill="#fefafb" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"/>
+                    <path class="css-svg-path-s fill-p" fill="#fefafb" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"/>
+                </svg>
+            </div>
+            <div id="sass-wrapper">
+                <svg fill="#1e1e1e" width="100%" height="100%" viewBox="0 0 24 24">
+                    <path class="sass-svg-path-p fill-s" d="M20.657,13.355c-0.838,0.004-1.564,0.206-2.173,0.506c-0.223-0.444-0.448-0.835-0.486-1.126	c-0.044-0.339-0.095-0.542-0.042-0.946c0.053-0.404,0.287-0.976,0.284-1.019c-0.003-0.043-0.052-0.249-0.536-0.252	c-0.484-0.003-0.897,0.093-0.946,0.221c-0.049,0.128-0.142,0.415-0.2,0.715c-0.085,0.438-0.965,2.002-1.465,2.82	c-0.164-0.319-0.303-0.601-0.332-0.823c-0.044-0.339-0.095-0.542-0.042-0.946c0.053-0.404,0.287-0.976,0.284-1.019	c-0.003-0.043-0.052-0.249-0.536-0.252c-0.484-0.003-0.897,0.093-0.946,0.221c-0.049,0.128-0.101,0.426-0.2,0.715	c-0.099,0.289-1.27,2.897-1.576,3.573c-0.156,0.344-0.292,0.621-0.388,0.81c0,0-0.001-0.001-0.001-0.001s-0.006,0.013-0.016,0.034	c-0.082,0.161-0.131,0.25-0.131,0.25s0.001,0.001,0.001,0.003c-0.065,0.118-0.135,0.228-0.17,0.228	c-0.024,0-0.073-0.314,0.011-0.746c0.174-0.905,0.593-2.316,0.588-2.364c-0.002-0.025,0.078-0.271-0.273-0.399	c-0.341-0.125-0.463,0.083-0.494,0.084c-0.03,0.001-0.053,0.074-0.053,0.074s0.38-1.587-0.725-1.587	c-0.691,0-1.648,0.756-2.12,1.441c-0.298,0.162-0.935,0.51-1.61,0.881c-0.26,0.143-0.524,0.288-0.776,0.427	c-0.017-0.019-0.034-0.038-0.052-0.057c-1.34-1.43-3.818-2.441-3.713-4.363c0.038-0.699,0.281-2.539,4.76-4.771	c3.669-1.828,6.607-1.325,7.114-0.21c0.725,1.593-1.57,4.554-5.38,4.981c-1.452,0.163-2.216-0.4-2.406-0.609	c-0.2-0.221-0.23-0.231-0.305-0.189c-0.122,0.067-0.045,0.262,0,0.378c0.114,0.296,0.581,0.821,1.377,1.082	c0.7,0.23,2.405,0.356,4.466-0.441c2.309-0.893,4.112-3.377,3.582-5.454c-0.539-2.112-4.04-2.806-7.355-1.629	C5.706,4.293,3.571,5.393,2.036,6.829c-1.825,1.707-2.117,3.194-1.997,3.815c0.426,2.206,3.467,3.643,4.685,4.708	c-0.06,0.033-0.116,0.064-0.168,0.093c-0.611,0.302-2.929,1.515-3.509,2.797c-0.658,1.454,0.105,2.497,0.609,2.638	c1.564,0.435,3.169-0.348,4.031-1.634c0.862-1.286,0.757-2.961,0.361-3.725c-0.005-0.009-0.01-0.019-0.015-0.028	c0.158-0.093,0.318-0.188,0.478-0.282c0.311-0.182,0.616-0.353,0.88-0.497c-0.148,0.406-0.257,0.892-0.313,1.595	C7.013,17.133,7.352,18.2,7.794,18.62c0.195,0.185,0.429,0.189,0.578,0.189c0.515,0,0.75-0.428,1.009-0.935	c0.317-0.622,0.599-1.345,0.599-1.345s-0.353,1.955,0.61,1.955c0.351,0,0.704-0.455,0.861-0.687c0,0.003,0.001,0.004,0.001,0.004	s0.009-0.015,0.027-0.045c0.036-0.056,0.057-0.091,0.057-0.091s0.001-0.004,0.002-0.01c0.141-0.245,0.454-0.803,0.923-1.724	c0.606-1.19,1.187-2.68,1.187-2.68s0.054,0.364,0.231,0.967c0.104,0.354,0.326,0.746,0.5,1.122	c-0.141,0.195-0.227,0.307-0.227,0.307s0.001,0.002,0.002,0.006c-0.112,0.149-0.238,0.31-0.37,0.467	c-0.478,0.57-1.048,1.22-1.124,1.408c-0.09,0.221-0.069,0.384,0.105,0.515c0.127,0.096,0.353,0.11,0.589,0.095	c0.43-0.029,0.732-0.136,0.882-0.2c0.233-0.082,0.504-0.212,0.758-0.399c0.469-0.345,0.752-0.839,0.725-1.492	c-0.015-0.36-0.13-0.717-0.275-1.054c0.043-0.061,0.085-0.123,0.128-0.186c0.74-1.081,1.314-2.27,1.314-2.27	s0.054,0.364,0.231,0.967c0.09,0.305,0.266,0.638,0.426,0.964c-0.696,0.565-1.127,1.222-1.277,1.653	c-0.277,0.797-0.06,1.158,0.347,1.24c0.184,0.037,0.445-0.047,0.64-0.13c0.244-0.081,0.536-0.215,0.81-0.416	c0.469-0.345,0.92-0.828,0.893-1.482c-0.012-0.298-0.093-0.593-0.203-0.877c0.59-0.246,1.353-0.382,2.325-0.269	c2.086,0.244,2.495,1.546,2.417,2.091c-0.078,0.545-0.516,0.845-0.662,0.935c-0.146,0.09-0.191,0.122-0.179,0.189	c0.018,0.098,0.085,0.094,0.21,0.073c0.172-0.029,1.095-0.443,1.135-1.45C24.049,14.746,22.825,13.343,20.657,13.355z M4.578,18.775	c-0.691,0.754-1.656,1.039-2.07,0.799c-0.447-0.259-0.27-1.369,0.578-2.169c0.517-0.487,1.184-0.936,1.627-1.213	c0.101-0.061,0.249-0.15,0.429-0.257c0.03-0.017,0.047-0.026,0.047-0.026l-0.001-0.001c0.035-0.021,0.07-0.042,0.107-0.064	C5.603,16.982,5.303,17.984,4.578,18.775z M9.612,15.353c-0.241,0.587-0.744,2.088-1.051,2.007c-0.263-0.069-0.423-1.21-0.053-2.333	c0.187-0.565,0.585-1.241,0.82-1.503c0.377-0.422,0.792-0.56,0.893-0.389C10.35,13.354,9.763,14.986,9.612,15.353z M13.77,17.338	c-0.102,0.053-0.196,0.087-0.239,0.061c-0.032-0.019,0.042-0.089,0.042-0.089s0.52-0.56,0.725-0.814	c0.119-0.148,0.257-0.324,0.408-0.521c0.001,0.02,0.002,0.039,0.002,0.058C14.707,16.703,14.059,17.156,13.77,17.338z M16.974,16.607c-0.076-0.054-0.063-0.229,0.187-0.774c0.098-0.214,0.322-0.574,0.712-0.919c0.045,0.142,0.073,0.277,0.072,0.404	C17.94,16.162,17.338,16.477,16.974,16.607z"/>
+                </svg>
+            </div>
+            <div id="js-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 1052 1052">
+                    <path class="js-svg-path-p fill-s" fill="#1e1e1e" d="M0 0h1052v1052H0z"/>
+                    <path class="js-svg-path-s fill-p" d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z" fill="#fefafb"/>
+                </svg>
+            </div>
+            <div id="ts-wrapper">
+                <svg viewBox="0 0 400 400" width="100%" height="100%">
+                    <path class="ts-svg-path-p fill-s" fill="#1e1e1e" class="st0" d="M0 200V0h400v400H0"/>
+                    <path class="ts-svg-path-s fill-p" fill="#fefafb" d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z"/>
+                </svg>
+            </div>
+            <div id="java-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 32 32">
+                    <path class="java-svg-path-p fill-s" d="M11.622 24.74s-1.23.748.855.962c2.51.32 3.847.267 6.625-.267a10.02 10.02 0 0 0 1.763.855c-6.25 2.672-14.16-.16-9.244-1.55zm-.8-3.473s-1.336 1.015.748 1.23c2.725.267 4.862.32 8.55-.427a3.26 3.26 0 0 0 1.282.801c-7.534 2.244-15.976.214-10.58-1.603zm14.747 6.09s.908.748-1.015 1.336c-3.58 1.07-15.014 1.39-18.22 0-1.122-.48 1.015-1.175 1.7-1.282.695-.16 1.07-.16 1.07-.16-1.23-.855-8.175 1.763-3.526 2.51 12.77 2.084 23.296-.908 19.983-2.404zM12.2 17.633s-5.824 1.39-2.084 1.87c1.603.214 4.755.16 7.694-.053 2.404-.214 4.81-.64 4.81-.64s-.855.374-1.443.748c-5.93 1.55-17.312.855-14.052-.748 2.778-1.336 5.076-1.175 5.076-1.175zm10.42 5.824c5.984-3.1 3.206-6.09 1.282-5.717-.48.107-.695.214-.695.214s.16-.32.534-.427c3.794-1.336 6.786 4.007-1.23 6.09 0 0 .053-.053.107-.16zm-9.83 8.442c5.77.374 14.587-.214 14.8-2.94 0 0-.427 1.07-4.755 1.87-4.916.908-11.007.8-14.587.214 0 0 .748.64 4.542.855z" fill="#1e1e1e"/>
+                    <path class="java-svg-path-p fill-s" d="M18.996.001s3.313 3.366-3.152 8.442c-5.183 4.114-1.175 6.465 0 9.137-3.046-2.725-5.236-5.13-3.74-7.373C14.294 6.893 20.332 5.3 18.996.001zm-1.7 15.335c1.55 1.763-.427 3.366-.427 3.366s3.954-2.03 2.137-4.542c-1.656-2.404-2.94-3.58 4.007-7.587 0 0-10.953 2.725-5.717 8.763z" fill="#1e1e1e"/>
+                </svg>
+            </div>
+            <div id="mysql-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 25.6 25.6">
+                    <path class="mysql-svg-path-p fill-s" d="M179.076 94.886c-3.568-.1-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72l2.855 2.053c1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428l-1.34-1.293c-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.1c.98-.1 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713l2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436l-3.658-7.763c-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.5-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.5.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 15 .715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.1l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.1-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.5-.535-1.294-.178-1.83.088-.357.268-.5.623-.58.58-.5 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.1 4.37.5 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.1h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.1c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z" transform="matrix(.390229 0 0 .38781 -46.300037 -16.856717)" fill-rule="evenodd" fill="#1e1e1e"/>
+                </svg>
+            </div>
+            <div id="ps-wrapper">
+                <svg width="100%" height="100%" viewBox="0 0 17.469 17.469" style="enable-background:new 0 0 17.469 17.469;" xml:space="preserve">
+                    <path class="ps-svg-path-p fill-s" style="fill:#1e1e1e;" d="M5.925,4.982c-0.442,0-0.742,0.043-0.898,0.087v2.841C5.213,7.952,5.44,7.966,5.754,7.966c1.157,0,1.871-0.585,1.871-1.571C7.624,5.511,7.01,4.982,5.925,4.982z"/>
+                    <path class="ps-svg-path-p fill-s" style="fill:#1e1e1e;" d="M16.4,0.002H1.07C0.479,0.002,0,0.48,0,1.069v15.329c0,0.59,0.479,1.069,1.07,1.069H16.4c0.59,0,1.069-0.479,1.069-1.069V1.07C17.469,0.48,16.99,0.002,16.4,0.002z M8.894,8.624c-0.741,0.7-1.842,1.014-3.125,1.014c-0.287,0-0.543-0.014-0.743-0.043v3.442H2.869V3.541C3.54,3.428,4.482,3.342,5.811,3.342c1.341,0,2.299,0.256,2.94,0.771c0.617,0.486,1.03,1.286,1.03,2.228S9.466,8.08,8.894,8.624z M12.145,13.179c-0.916,0-1.729-0.198-2.258-0.485l0.385-1.556c0.4,0.241,1.229,0.527,1.873,0.527c0.655,0,0.927-0.228,0.927-0.586c0-0.356-0.214-0.527-1.027-0.799c-1.442-0.485-2-1.271-1.986-2.099c0-1.298,1.114-2.286,2.842-2.286c0.814,0,1.542,0.187,1.97,0.4l-0.385,1.5c-0.314-0.172-0.913-0.399-1.514-0.399c-0.527,0-0.826,0.214-0.826,0.571c0,0.328,0.269,0.499,1.126,0.8c1.328,0.456,1.886,1.128,1.899,2.154C15.171,12.222,14.141,13.179,12.145,13.179z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="nerdwork">
+        <div id="nerdwork-outwrapper" class="project-outwrapper">
+            <div id="nerdwork-inwrapper" class="project-inwrapper">
+                <img id="nerdwork-img" class="project-img" src="./images/nerdwork.png" alt="">
+                <div id="nerdwork-info" class="project-info">
+                    <h1 id="nerdwork-title" class="project-title clr-s"><span>Nerd</span>Work</h1>
+                    <p id="nerdwork-text" class="project-text clr-s">NerdWork is a team project, built with <span>Java</span> and <span>PHP</span>, created in the context of the Software Engineering course. Any student that holds an academic email from the Applied Informatics Department can sign up and use Nerdwork in order to keep track of his university courses.<br><br> NerdWork excels when it comes to <span>managing appointments</span> between students and professors, helping both sides manage their appointments with ease, <span>without</span> the need of <span>direct and simultaneous communication</span>.<br><br>Further information can be found in its GitHub repository.</p>
+                </div>
+            </div>
+            <div id="nerdwork-links" class="project-links">
+                <a id="nerdwork-github-link" class="project-github-link btn-s" href="https://github.com/Nerdwork-Team/Nerdwork-Project" target="_blank">NerdWork on GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div id="kokfilms">
+        <div id="kokfilms-outwrapper" class="project-outwrapper">
+            <div id="kokfilms-inwrapper" class="project-inwrapper">
+                <img id="kokfilms-img" class="project-img" src="./images/kokfilms.png" alt="">
+                <div id="kokfilms-info" class="project-info">
+                    <h1 id="kokfilms-title" class="project-title clr-s">KoK<span>Films</span></h1>
+                    <p id="kokfilms-text" class="project-text clr-s">A website that serves as a personal portfolio to showcase the work and projects of a videographer and video editor. <span>HTML5</span>, <span>SASS</span>, <span>JavaScript ES6+</span> and the <span>Fullpage.js</span> plugin where used. It keeps getting updates every time a new work is made.</p>
+                </div>
+            </div>
+            <div id="kokfilms-links" class="project-links">
+                <a id="kokfilms-github-link" class="project-github-link btn-s" href="https://github.com/ptsionis/kokfilms" target="_blank">KoKFilms on GitHub</a>
+                <a id="kokfilms-visit-link" class="project-other1-link" href="https://kokfilms.netlify.app/" target="_blank">Visit KoKFilms</a>
+            </div>
+        </div>
+    </div>
+    <div id="blackjack">
+        <div id="blackjack-outwrapper" class="project-outwrapper">
+            <div id="blackjack-inwrapper" class="project-inwrapper">
+                <img id="blackjack-img" class="project-img" src="./images/blackjack.png" alt="">
+                <div id="blackjack-info" class="project-info">
+                    <h1 id="blackjack-title" class="project-title clr-s"><span>Black</span>Jack</h1>
+                    <p id="blackjack-text" class="project-text clr-s">BlackJack is a browser game, built using <span>HTML5</span>, <span>CSS3</span> and <span>JavaScript ES6+</span>.<br><br> It is in <span>BETA</span> version and it serves as a project - <span>experiment</span>, where I test various tools and technologies. and I am looking forward to add a local storage database.</p>
+                </div>
+            </div>
+            <div id="blackjack-links" class="project-links">
+                <a id="blackjack-github-link" class="project-github-link btn-s" href="https://github.com/ptsionis/blackjack" target="_blank">BlackJack on GitHub</a>
+                <a id="blackjack-play-link" class="project-other1-link" href="https://ptsionis.github.io/blackjack/" target="_blank">Play BlackJack</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="bg-clr-s">
+        <div id="footer-wrapper">
+            <p id="footer-copy" class="clr-p"></p>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>

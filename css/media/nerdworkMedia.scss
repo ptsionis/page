@@ -1,0 +1,7 @@
+@use 'projectMedia' as prj;
+
+@mixin nerdworkMedia() {
+    #nerdwork {
+        @include prj.projectMedia();
+    }
+}

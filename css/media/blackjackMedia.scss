@@ -1,0 +1,7 @@
+@use 'projectMedia' as prj;
+
+@mixin blackjackMedia() {
+    #blackjack {
+        @include prj.projectMedia();
+    }
+}

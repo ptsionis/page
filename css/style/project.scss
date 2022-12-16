@@ -1,0 +1,77 @@
+@use 'colors' as clr;
+@use 'section' as sec;
+@use 'button' as btn;
+
+@mixin project($flex-dir, $text-al) {
+    .project-outwrapper {
+        width: 100%;
+        height: calc(100vh - 6.5vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5vh;
+    
+        .project-inwrapper {
+            display: flex;
+            flex-direction: $flex-dir;
+            column-gap: 5vw;
+            text-align: $text-al;
+    
+            .project-img {
+                width: 35vw;
+                height: auto;
+                border: {
+                    style: none;
+                    radius: 15px;
+                }
+            }
+            
+            .project-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                .project-title {
+                    font-size: 3vw;
+                    color: clr.$clrSecondary;
+    
+                    span {
+                        color: clr.$clrAlternative;
+                    }
+                }
+    
+                .project-text {
+                    font: {
+                        size: 1vw;
+                    }
+    
+                    span {
+                        color: clr.$clrAlternative;
+                        font: {
+                            weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-links {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1vw;
+    
+            .project-github-link {
+                width: fit-content;
+                @include btn.button(clr.$clrPrimary, clr.$clrSecondary, clr.$clrSecondary);
+            }
+
+            .project-other1-link {
+                width: fit-content;
+                @include btn.button(clr.$clrPrimary, clr.$clrAlternative, clr.$clrAlternative);
+            }
+        }
+    }
+}

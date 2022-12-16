@@ -1,0 +1,15 @@
+@mixin toolsMedia() {
+    #tools {
+        #tools-title {
+            font-size: 10vw;
+        }
+
+        #tools-wrapper {
+            & > * {
+                svg {
+                    width: 12.5vw;
+                }
+            }
+        }
+    }
+}

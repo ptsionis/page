@@ -1,0 +1,10 @@
+@use 'colors' as clr;
+@use 'section' as sec;
+@use 'button' as btn;
+@use 'project' as pr;
+
+#kokfilms {
+    @include sec.section();
+
+    @include pr.project(row-reverse, start);
+}
