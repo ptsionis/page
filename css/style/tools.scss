@@ -2,8 +2,14 @@
 @use 'fonts' as ff;
 @use 'section' as sec;
 
-svg-hover {
-    fill: clr.$clrAlternative !important;
+tools-svg-path {
+    .tools-svg-path {
+        fill: clr.$clrAlternative !important;
+    }
+
+    .tools-abbr {
+        color: clr.$clrAlternative !important;
+    }
 }
 
 #tools {
@@ -34,7 +40,9 @@ svg-hover {
         grid-template-columns: auto auto auto auto;
         row-gap: 5vh;
 
-        & > * {
+        & > * {display: flex;
+            flex-direction: column;
+            row-gap: 1vh;
             margin: auto;
 
             svg {
@@ -43,51 +51,18 @@ svg-hover {
             }
         }
 
-        #html-wrapper:hover {
-            .html-svg-path-p {
-                @extend svg-hover;
+        & > div .tools-abbr {
+            text: {
+                align: center;
+            }
+            font: {
+                size: .85vw;
             }
         }
 
-        #css-wrapper:hover {
-            .css-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #sass-wrapper:hover {
-            .sass-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #js-wrapper:hover {
-            .js-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #ts-wrapper:hover {
-            .ts-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #java-wrapper:hover {
-            .java-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #mysql-wrapper:hover {
-            .mysql-svg-path-p {
-                @extend svg-hover;
-            }
-        }
-
-        #ps-wrapper:hover {
-            .ps-svg-path-p {
-                @extend svg-hover;
+        & > .tools-inwrapper {
+            &:hover {
+                @extend tools-svg-path;
             }
         }
     }

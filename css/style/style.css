@@ -195,8 +195,11 @@ body #home #home-wrapper #home-links-wrapper #home-linkedin-link:hover {
   transition: all 0.1s ease !important;
   box-shadow: 2px 2px 1px #1e1e1e, 2px 2px 1px #1e1e1e;
 }
-body svg-hover, body #tools #tools-wrapper #ps-wrapper:hover .ps-svg-path-p, body #tools #tools-wrapper #mysql-wrapper:hover .mysql-svg-path-p, body #tools #tools-wrapper #java-wrapper:hover .java-svg-path-p, body #tools #tools-wrapper #ts-wrapper:hover .ts-svg-path-p, body #tools #tools-wrapper #js-wrapper:hover .js-svg-path-p, body #tools #tools-wrapper #sass-wrapper:hover .sass-svg-path-p, body #tools #tools-wrapper #css-wrapper:hover .css-svg-path-p, body #tools #tools-wrapper #html-wrapper:hover .html-svg-path-p {
+body tools-svg-path .tools-svg-path, body #tools #tools-wrapper > .tools-inwrapper:hover .tools-svg-path {
   fill: #ed0735 !important;
+}
+body tools-svg-path .tools-abbr, body #tools #tools-wrapper > .tools-inwrapper:hover .tools-abbr {
+  color: #ed0735 !important;
 }
 body #tools {
   width: 85vw;
@@ -226,11 +229,18 @@ body #tools #tools-wrapper {
   row-gap: 5vh;
 }
 body #tools #tools-wrapper > * {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
   margin: auto;
 }
 body #tools #tools-wrapper > * svg {
   width: 7.5vw;
   height: auto;
+}
+body #tools #tools-wrapper > div .tools-abbr {
+  text-align: center;
+  font-size: 0.85vw;
 }
 body #nerdwork {
   width: 85vw;

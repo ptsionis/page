@@ -10,6 +10,10 @@
                     width: 12.5vw;
                 }
             }
+
+            & > div .tools-abbr {
+                display: none;
+            }
         }
     }
 }

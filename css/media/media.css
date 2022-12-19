@@ -48,6 +48,9 @@
   body #tools #tools-wrapper > * svg {
     width: 12.5vw;
   }
+  body #tools #tools-wrapper > div .tools-abbr {
+    display: none;
+  }
   body #nerdwork .project-outwrapper {
     row-gap: 2.5vh;
   }
